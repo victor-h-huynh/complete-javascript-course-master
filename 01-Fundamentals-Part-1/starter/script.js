@@ -22,10 +22,10 @@
     // let myFirstJob = "Programmer";
     // let myCurrentJob = "Teacher";
 
-let country = "Canada";
-let continent = "North America";
-let population = 579;
+// let country = "Canada";
+// let continent = "North America";
+// let population = 579;
 
-console.log(country);
-console.log(continent);
-console.log(population);
+// console.log(country);
+// console.log(continent);
+// console.log(population);
