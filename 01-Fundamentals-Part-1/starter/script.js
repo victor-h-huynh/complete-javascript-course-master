@@ -50,15 +50,20 @@
 
 // console.log(typeof null);
 
-let age = 30;
-age = 31;
+// let age = 30;
+// age = 31;
 
-const birthYear = 1991;
+// const birthYear = 1991;
 // birthYear = 1990
 // const job;
 
-var job = 'programmer';
-job = 'teacher';
+// var job = 'programmer';
+// job = 'teacher';
 
-lastName = 'Doe';
-console.log(lastName);
+// lastName = 'Doe';
+// console.log(lastName);
+
+///////////////////////////////////////////////////////////////////////////////////////
+// Basic Operators
+///////////////////////////////////////////////////////////////////////////////////////
+
