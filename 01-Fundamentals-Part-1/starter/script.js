@@ -124,14 +124,26 @@
 // Coding Challenge #1
 ///////////////////////////////////////////////////////////////////////////////////////
 
-const markMass = 78;
-const markHeight = 1.69;
-const johnMass = 92;
-const johnHeight = 1.95;
-const markBMI = markMass / (markHeight * markHeight);
-const johnBMI = johnMass / (johnHeight * johnHeight)
-const markHigherBMI = markBMI > johnBMI
+// const markMass = 78;
+// const markHeight = 1.69;
+// const johnMass = 92;
+// const johnHeight = 1.95;
+// const markBMI = markMass / (markHeight * markHeight);
+// const johnBMI = johnMass / (johnHeight * johnHeight)
+// const markHigherBMI = markBMI > johnBMI
 
-console.log(markBMI);
-console.log(johnBMI)
-console.log(markHigherBMI)
+// console.log(markBMI);
+// console.log(johnBMI)
+// console.log(markHigherBMI)
+
+// const markMass = 95;
+// const markHeight = 1.88;
+// const johnMass = 85;
+// const johnHeight = 1.76;
+// const markBMI = markMass / (markHeight * markHeight);
+// const johnBMI = johnMass / (johnHeight * johnHeight)
+// const markHigherBMI = markBMI > johnBMI
+
+// console.log(markBMI);
+// console.log(johnBMI)
+// console.log(markHigherBMI)
