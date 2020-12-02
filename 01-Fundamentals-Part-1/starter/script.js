@@ -148,25 +148,52 @@
 // console.log(johnBMI)
 // console.log(markHigherBMI)
 
-const firstName = 'Jonas';
-const job = 'teacher';
-const birthYear = 1991;
-const year = 2037
+///////////////////////////////////////////////////////////////////////////////////////
+// Strings & Template literals
+///////////////////////////////////////////////////////////////////////////////////////
 
-const jonas = "I'm " + firstName + ', a ' + (year - birthYear) + ' year old ' + job + '!';
+// const firstName = 'Jonas';
+// const job = 'teacher';
+// const birthYear = 1991;
+// const year = 2037
 
-console.log(jonas);
+// const jonas = "I'm " + firstName + ', a ' + (year - birthYear) + ' year old ' + job + '!';
 
-const jonasNew = `I'm ${firstName}, a ${(year - birthYear)} year old ${job}!`
+// console.log(jonas);
 
-console.log(jonasNew);
+// const jonasNew = `I'm ${firstName}, a ${(year - birthYear)} year old ${job}!`
 
-console.log(`Just a regular string...`);
+// console.log(jonasNew);
 
-console.log('String with \n\
-multiple \n\
-lines');
+// console.log(`Just a regular string...`);
 
-console.log(`String
-multiple
-lines`)
+// console.log('String with \n\
+// multiple \n\
+// lines');
+
+// console.log(`String
+// multiple
+// lines`)
+
+///////////////////////////////////////////////////////////////////////////////////////
+// Taking decisions: if / else Statements
+///////////////////////////////////////////////////////////////////////////////////////
+
+const age = 19; 
+
+if(age >= 18) {
+    console.log('Sarah can start driving license');
+} else {
+    const yearsLeft = 18 - age;
+    console.log(`Sarah is too young. Wait another ${yearsLeft} years :)`)
+}
+
+const birthYear = 1998;
+let century;
+if(birthYear <= 2000) {
+    century = 20;
+} else {
+    century = 21;
+}
+
+console.log(century)
