@@ -398,19 +398,28 @@
 // The Conditional (Tenary) Operator
 ///////////////////////////////////////////////////////////////////////////////////////
 
-const age = 23;
-age >= 18 ? console.log('I like to drink wine') : console.log('I like to drink water');
+// const age = 23;
+// age >= 18 ? console.log('I like to drink wine') : console.log('I like to drink water');
 
-const drink = age >= 18 ? 'wine' : 'water';
-console.log(drink)
+// const drink = age >= 18 ? 'wine' : 'water';
+// console.log(drink)
 
-let drink2;
-if (age >= 18) {
-    drink2 = 'wine';
-} else {
-    drink2 = 'water';
-}
+// let drink2;
+// if (age >= 18) {
+//     drink2 = 'wine';
+// } else {
+//     drink2 = 'water';
+// }
 
-console.log(drink2);
+// console.log(drink2);
 
-console.log(`I like to drink ${age >= 18 ? 'wine' : 'water'}`)
+// console.log(`I like to drink ${age >= 18 ? 'wine' : 'water'}`)
+
+///////////////////////////////////////////////////////////////////////////////////////
+// Coding Challenge #4
+///////////////////////////////////////////////////////////////////////////////////////
+
+const bill = 275
+const tip = bill >= 50 && bill <= 300 ? 0.15 * bill : 0.20 * bill;
+console.log(tip)
+console.log('Bill:', bill, 'Tip:', tip, 'finalValue', bill + tip);
