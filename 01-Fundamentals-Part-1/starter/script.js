@@ -333,19 +333,17 @@
 // const averageScoreDolphins = (96 + 108 + 89) / 3;
 // const averageScoreKoalas = (88 + 91 + 110) / 3;
 
-// const averageScoreDolphins = (97 + 112 + 101) / 3;
-// const averageScoreKoalas = (109 + 95 + 123) / 3;
-
 const averageScoreDolphins = (97 + 112 + 101) / 3;
-const averageScoreKoalas = (109 + 95 + 106) / 3;
+const averageScoreKoalas = (109 + 95 + 123) / 3;
 
-const isAboveMinScore = averageScoreDolphins > 100 || averageScoreKoalas > 100;
+// const averageScoreDolphins = (97 + 112 + 101) / 3;
+// const averageScoreKoalas = (109 + 95 + 106) / 3;
 
-    if(averageScoreDolphins === averageScoreKoalas && isAboveMinScore) {
+    if(averageScoreDolphins === averageScoreKoalas && averageScoreDolphins >= 100 && averageScoreKoalas >= 100) {
         console.log("It's a draw!");
-    } else if (averageScoreKoalas > averageScoreDolphins && isAboveMinScore) {
+    } else if (averageScoreKoalas > averageScoreDolphins && averageScoreKoalas >= 100) {
         console.log("Koalas win with " + averageScoreKoalas)
-    } else if (averageScoreDolphins > averageScoreKoalas && isAboveMinScore) {
+    } else if (averageScoreDolphins > averageScoreKoalas && averageScoreDolphins >= 100) {
         console.log("Dolphins win with " + averageScoreDolphins);
     } else {
         console.log("Score below 100")
