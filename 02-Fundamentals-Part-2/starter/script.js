@@ -116,22 +116,26 @@
 // Coding Challenge #1
 ////////////////////////////////////////////////////////////////
 
-const calcAverage = (a, b, c) => (a + b + c) / 3
+// const calcAverage = (a, b, c) => (a + b + c) / 3
 
-const dolphinsTeam = calcAverage(85, 54, 41)
-const koalasTeam = calcAverage(23, 34, 27)
+// const dolphinsTeam = calcAverage(85, 54, 41)
+// const koalasTeam = calcAverage(23, 34, 27)
 
-console.log(dolphinsTeam)
-console.log(koalasTeam)
+// console.log(dolphinsTeam)
+// console.log(koalasTeam)
 
-function checkWinner(avgDolphins, avgKoalas) {
-    if(avgDolphins >= 2 * avgKoalas) {
-        console.log(`Dolphins win (${avgDolphins} vs. ${avgKoalas})`)
-    } else if(avgKoalas >= 2 * avgDolphins) {
-        console.log(`Koalas win (${avgKoalas} vs. ${avgDolphins})`)
-    } else {
-        console.log('There is no winner')
-    }
-}
+// function checkWinner(avgDolphins, avgKoalas) {
+//     if(avgDolphins >= 2 * avgKoalas) {
+//         console.log(`Dolphins win (${avgDolphins} vs. ${avgKoalas})`)
+//     } else if(avgKoalas >= 2 * avgDolphins) {
+//         console.log(`Koalas win (${avgKoalas} vs. ${avgDolphins})`)
+//     } else {
+//         console.log('There is no winner')
+//     }
+// }
 
-checkWinner(dolphinsTeam, koalasTeam)
+// checkWinner(dolphinsTeam, koalasTeam)
+
+////////////////////////////////////////////////////////////////
+// Introduction to Arrays
+////////////////////////////////////////////////////////////////
