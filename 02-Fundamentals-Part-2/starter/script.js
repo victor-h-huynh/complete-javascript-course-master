@@ -182,33 +182,58 @@
 // Basic Array Operators(Methods)
 ////////////////////////////////////////////////////////////////
 
-const friends = ['Michael', 'Steven', 'Peter'];
+// const friends = ['Michael', 'Steven', 'Peter'];
 
-// Add elements
-friends.push('Jay'); // End
-console.log(friends);
+// // Add elements
+// friends.push('Jay'); // End
+// console.log(friends);
 
-friends.unshift('John'); // Beginning
-console.log(friends);
+// friends.unshift('John'); // Beginning
+// console.log(friends);
 
-// Remove elements
-friends.pop(); // Last
-const popped = friends.pop();
-console.log(popped);
-console.log(friends);
+// // Remove elements
+// friends.pop(); // Last
+// const popped = friends.pop();
+// console.log(popped);
+// console.log(friends);
 
-friends.shift(); // First
-console.log(friends);
+// friends.shift(); // First
+// console.log(friends);
 
-console.log(friends.indexOf('Steven'));
-console.log(friends.indexOf('Bob'));
+// console.log(friends.indexOf('Steven'));
+// console.log(friends.indexOf('Bob'));
 
-friends.push(23)
-console.log(friends)
-console.log(friends.includes('Steven'));
-console.log(friends.includes('Bob'));
-console.log(friends.includes(23));
+// friends.push(23)
+// console.log(friends)
+// console.log(friends.includes('Steven'));
+// console.log(friends.includes('Bob'));
+// console.log(friends.includes(23));
 
-if (friends.includes('Steven')) {
-    console.log('You have a friend called Steven');
-}
+// if (friends.includes('Steven')) {
+//     console.log('You have a friend called Steven');
+// }
+
+////////////////////////////////////////////////////////////////
+// Coding Challenge #2
+////////////////////////////////////////////////////////////////
+
+// const bills = [125, 555, 44]
+// const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+// const total = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]]
+
+// function calcTip (bill) {
+//     if (bill >= 50 && bill <= 300) {
+//         const tipPercent = 0.15 * bill;
+//         return tipPercent;
+//     }  else {
+//         const tipPercent = 0.20 * bill;
+//         return tipPercent;
+//     }
+// }
+
+// console.log(tips)
+// console.log(total)
+
+////////////////////////////////////////////////////////////////
+// Objects
+////////////////////////////////////////////////////////////////
