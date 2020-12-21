@@ -312,20 +312,24 @@ const jonas = {
     //     return 2037 - this.birthYear;
     // }
 
-    // calcAge: function() {
-    //     this.age = 2037 - this.birthYear;
-    //     return this.age;
-    // }
+    calcAge: function() {
+        this.age = 2037 - this.birthYear;
+        return this.age;
+    },
 
-    getMethod: function() {
-        
+    getSummary: function() {
+        // this.age = 2037 - this.birthYear;
+        return `${this.firstName} is a ${this.calcAge()} year old ${this.job} and ${this.hasDriversLicense ? "he has a driver's license" : "he does NOT have a driver's license"}`
     }
 };
 
-console.log(jonas.calcAge());
+// console.log(jonas.calcAge());
 
-console.log(jonas.age);
-console.log(jonas.age);
-console.log(jonas.age);
+// console.log(jonas.age);
+// console.log(jonas.age);
+// console.log(jonas.age);
 
 // console.log(jonas['calcAge'](jonas['birthYear']))
+
+// jonas.calcAge()
+console.log(jonas.getSummary());
