@@ -295,41 +295,84 @@
 // Object Methods
 ////////////////////////////////////////////////////////////////
 
-const jonas = {
-    firstName: 'Jonas',
-    lastName: 'Schmedtmann',
-    birthYear: 1991,
-    job: 'teacher',
-    friends: ['Michael', 'Peter', 'Steven'],
-    hasDriversLicense: true,
+// const jonas = {
+//     firstName: 'Jonas',
+//     lastName: 'Schmedtmann',
+//     birthYear: 1991,
+//     job: 'teacher',
+//     friends: ['Michael', 'Peter', 'Steven'],
+//     hasDriversLicense: true,
 
-    // calcAge: function(birthYear) {
-    //     return 2037 - birthYear;
-    // }
+//     // calcAge: function(birthYear) {
+//     //     return 2037 - birthYear;
+//     // }
 
-    // calcAge: function() {
-    //     console.log(this);
-    //     return 2037 - this.birthYear;
-    // }
+//     // calcAge: function() {
+//     //     console.log(this);
+//     //     return 2037 - this.birthYear;
+//     // }
 
-    calcAge: function() {
-        this.age = 2037 - this.birthYear;
-        return this.age;
-    },
+//     calcAge: function() {
+//         this.age = 2037 - this.birthYear;
+//         return this.age;
+//     },
 
-    getSummary: function() {
-        // this.age = 2037 - this.birthYear;
-        return `${this.firstName} is a ${this.calcAge()} year old ${this.job} and ${this.hasDriversLicense ? "he has a driver's license" : "he does NOT have a driver's license"}`
-    }
-};
+//     getSummary: function() {
+//         // this.age = 2037 - this.birthYear;
+//         return `${this.firstName} is a ${this.calcAge()} year old ${this.job} and ${this.hasDriversLicense ? "he has a driver's license" : "he does NOT have a driver's license"}`
+//     }
+// };
 
-// console.log(jonas.calcAge());
+// // console.log(jonas.calcAge());
 
-// console.log(jonas.age);
-// console.log(jonas.age);
-// console.log(jonas.age);
+// // console.log(jonas.age);
+// // console.log(jonas.age);
+// // console.log(jonas.age);
 
-// console.log(jonas['calcAge'](jonas['birthYear']))
+// // console.log(jonas['calcAge'](jonas['birthYear']))
 
-// jonas.calcAge()
-console.log(jonas.getSummary());
+// // jonas.calcAge()
+// console.log(jonas.getSummary());
+
+////////////////////////////////////////////////////////////////
+// Coding Challenge #3
+////////////////////////////////////////////////////////////////
+
+// const mark = {
+//     fullName: "Mark Miller",
+//     mass: 78,
+//     height: 1.69,
+//     calcBMI: function () {
+//         this.BMI = this.mass / this.height ** 2;
+//         return this.BMI;
+//     }
+// };
+
+// const john = {
+//     fullName: "John Smith",
+//     mass: 92,
+//     height: 1.95,
+//     calcBMI: function () {
+//         this.BMI = this.mass / this.height ** 2;
+//         return this.BMI;
+//     }
+// };
+
+// // console.log(mark.calcBMI());
+// // console.log(john.calcBMI());
+
+// mark.calcBMI();
+// john.calcBMI();
+
+// if (john.BMI > mark.BMI) {
+//     console.log(`${john.fullName} BMI ${john.BMI} is higher than ${mark.fullName} ${mark.BMI}`)
+// } else {
+//     console.log(`${mark.fullName} BMI ${mark.BMI} is higher than ${john.fullName} ${john.BMI}`)
+// }
+
+// console.log(mark)
+// console.log(john)
+
+////////////////////////////////////////////////////////////////
+// Iteration: The for Loop
+////////////////////////////////////////////////////////////////
