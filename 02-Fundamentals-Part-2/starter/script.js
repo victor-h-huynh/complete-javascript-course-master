@@ -377,7 +377,7 @@
 // Iteration: The for Loop
 ////////////////////////////////////////////////////////////////
 
-// // for loop keeps running while condition is TRUE
+// for loop keeps running while condition is TRUE
 // for(let rep = 1; rep <= 10; rep++) {
 //     console.log(`Lifting weights reptition ${rep}`);
 // }
@@ -396,6 +396,7 @@
 // ];
 
 // const types = [];
+// const fillArray = []
 
 // for(let i = 0; i < jonas.length; i++) {
 //     // Reading from jonas array
@@ -404,9 +405,10 @@
 //     // Filling types array
 //     // types[i] = typeof jonas[i]
 
+//     fillArray[i] = i;
 //     types.push(typeof jonas[i])
 // }
-
+// console.log(fillArray);
 // console.log(types);
 
 // const years = [1991, 2007, 1969, 2020];
@@ -420,11 +422,20 @@
 
 // // continue and break
 // console.log('--- ONLY STRING ---')
+
+// i = 0 = 'string'
+// i = 1 = 'string'
+// i = 2 = 'number'
+// i = 3 = 'string'
+// i = 4 = 'object'
+// i = 5 = 'boolean'
+
 // for(let i = 0; i < jonas.length; i++) {
-//     if(typeof jonas[i] !== 'string') {
+//     if(typeof jonas[i] !== 'string') { // boolean !== 'string'
+//         console.log(i)
 //         continue; 
 //     }
-//     console.log(jonas[i], typeof jonas[i])
+//     console.log(jonas[i], typeof jonas[i]);
 // }
 
 // console.log('--- BREAK WITH NUMBER ---')
