@@ -341,12 +341,19 @@
 // const mark = {
 //     fullName: "Mark Miller",
 //     mass: 78,
-//     height: 1.69,
+//     height: function() {
+//         return this.fullName
+//     },
 //     calcBMI: function () {
 //         this.BMI = this.mass / this.height ** 2;
 //         return this.BMI;
 //     }
 // };
+
+// console.log(mark.height())
+// console.log('MARKhEIGHT', mark.height)
+
+// mark.calcBMI()
 
 // const john = {
 //     fullName: "John Smith",
@@ -469,3 +476,12 @@
 //         console.log(`Exercise ${exercise}: Lifting weight repetition ${rep}`)
 //     }
 // }
+
+////////////////////////////////////////////////////////////////
+// The while loop
+////////////////////////////////////////////////////////////////
+
+for(let rep = 1; rep <= 10; rep++) {
+    console.log(`Lifting weights reptition ${rep}`);
+}
+
