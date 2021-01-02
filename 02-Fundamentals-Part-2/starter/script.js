@@ -487,7 +487,7 @@
 
 let rep = 1;
 while(rep <= 10) {
-    console.log(`WHILE: Lifting weights reptition ${rep}`);
+    // console.log(`WHILE: Lifting weights reptition ${rep}`);
     rep++;
 }
 
@@ -498,4 +498,7 @@ while (dice !== 6) {
     console.log(`You rolled a ${dice}`)
     // Reassign the variable to compute the new dice roll. Otherwise it will take the first value only
     dice = Math.trunc(Math.random() * 6) + 1
+    if (dice === 6) {
+        console.log('Loop is about to end...')
+    }
 }
