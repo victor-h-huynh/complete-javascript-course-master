@@ -485,20 +485,55 @@
 //     console.log(`Lifting weights reptition ${rep}`);
 // }
 
-let rep = 1;
-while(rep <= 10) {
-    // console.log(`WHILE: Lifting weights reptition ${rep}`);
-    rep++;
-}
+// let rep = 1;
+// while(rep <= 10) {
+//     // console.log(`WHILE: Lifting weights reptition ${rep}`);
+//     rep++;
+// }
 
-// Assign the variable
-let dice = Math.trunc(Math.random() * 6) + 1
+// // Assign the variable
+// let dice = Math.trunc(Math.random() * 6) + 1
 
-while (dice !== 6) {
-    console.log(`You rolled a ${dice}`)
-    // Reassign the variable to compute the new dice roll. Otherwise it will take the first value only
-    dice = Math.trunc(Math.random() * 6) + 1
-    if (dice === 6) {
-        console.log('Loop is about to end...')
+// while (dice !== 6) {
+//     console.log(`You rolled a ${dice}`)
+//     // Reassign the variable to compute the new dice roll. Otherwise it will take the first value only
+//     dice = Math.trunc(Math.random() * 6) + 1
+//     if (dice === 6) {
+//         console.log('Loop is about to end...')
+//     }
+// }
+
+////////////////////////////////////////////////////////////////
+// Coding Challenge #4
+////////////////////////////////////////////////////////////////
+
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52]
+const tips = [];
+const totals = [];
+
+function calcTip (bills) {
+    if (bills >= 50 && bills <= 300) {
+        return 0.15 * bills;
+    }  else {
+        return 0.20 * bills;
     }
 }
+
+for(let i = 0; i < bills.length; i++) {
+    const tip = calcTip(bills[i])
+    tips.push(tip)
+    totals.push(bills[i] + tip)
+}
+
+function calcAverage (arr) {
+    let sum = 0;
+    for(let i = 0; i < arr.length; i++) {
+        sum += arr[i]
+    }
+    return sum / arr.length
+}
+
+console.log(calcAverage(totals))
+console.log(bills)
+console.log(tips);
+console.log(totals)
