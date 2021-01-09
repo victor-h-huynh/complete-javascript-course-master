@@ -7,3 +7,5 @@ if (x === 23) console.log(23);
 const calcAge = birthYear => 2037 - birthYear;
 
 console.log(x);
+
+console.log(calcAge(1950));
