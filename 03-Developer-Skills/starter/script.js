@@ -19,3 +19,9 @@ const temperatures = [3, -2, -6, -1, 'error', 9, 13, 17, 15, 14, 9, 5];
 // - What is temperature amplitude? Answer: Difference between highest and lowest temp
 // - How to computer max and min temperatures?
 // - What's a sensor error? And what to do?
+
+// 2) Breaking up into sub-problems
+// - How to ignore errors?
+// - Find max value in temperature array
+// - Find min value in temperature array
+// - Subtract min from max (amplitude) and return it
