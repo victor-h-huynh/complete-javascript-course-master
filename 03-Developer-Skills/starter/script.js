@@ -143,17 +143,33 @@
 // console.log(amplitudeBug);
 
 ///////////////////////////////////////////////////////////////////
-// Debugging
+// Coding Challenge #1
 //////////////////////////////////////////////////////////////////
 
+const data1 = [17, 21, 23];
+const data2 = [12, 5, -5, 0, 4];
+
 const printForecast = function (arr) {
+  // ''
+  // '17C in 1 days...' i = 0
+  // '17C in 1 days...21C in 2 days...' i = 1
+  let str = '';
   for (let i = 0; i < arr.length; i++) {
-    console.log(`... ${arr[i]}C in ${i + 1} days`);
+    str = str + `${arr[i]}C in ${i + 1} days...`;
+    console.log(str);
   }
-  return printForecast;
+  console.log('...' + str);
 };
 
-// printForecast([17, 21, 23]);
-// printForecast([12, 5, -5, 0, 4]);
+printForecast(data1);
+// printForecast(data2);
 
-1) 
+// 1) Understanding the problem
+// - Array transformed to string, separated by ...
+// - What is the X days? Answer: index +1
+
+// 2) Breaking up into sub-problems
+// - Transform array into string
+// - Transform each element to string with C
+// - String needs to contain day (index + 1)
+// - Add ... between elements and start and end of string
