@@ -48,6 +48,10 @@ btnRoll.addEventListener('click', function () {
       // switch to next player
       switchPlayer();
     }
+
+    if(scores[activePlayer] + currentScore > 20) {
+      switchPlayer()
+    }
   }
 });
 
@@ -58,7 +62,7 @@ if(playing) {
     // scores[1] = scores[1] + currentScore
     document.getElementById(`score--${activePlayer}`).textContent = scores[activePlayer];
     // 2. Check if player's score is >= 100
-    if(scores[activePlayer] >= 100) {
+    if(scores[activePlayer] >= 20) {
       // Finish the game
       playing = false;
       diceEl.classList.add('hidden');
