@@ -40,48 +40,64 @@ const restaurant = {
   },
 };
 
-const arr = [7, 8, 9];
-const badNewArr = [1, 2, arr[0], arr[1], arr[2]];
-console.log(badNewArr);
+// SPREAD, because on RIGHT side of =
+const arr = [1, 2, ...[3, 4]];
+console.log(arr);
 
-const newArr = [1, 2, ...arr];
-console.log(newArr);
+// REST, because on LEFT side of =
+const [a, b, ...others] = [1, 2, 3, 4, 5];
+console.log(a, b, others);
 
-console.log(...newArr);
-console.log(1, 2, 7, 8, 9);
+/////////////////////////////////////////////////////////
+// The Spread Operator (...)
 
-const newMenu = [...restaurant.mainMenu, 'Gnocci'];
-console.log(newMenu);
+// const arr = [7, 8, 9];
+// const badNewArr = [1, 2, arr[0], arr[1], arr[2]];
+// console.log(badNewArr);
 
-// Copy array
-const mainMenuCopy = [...restaurant.mainMenu];
+// const newArr = [1, 2, ...arr];
+// console.log(newArr);
 
-// Join 2 arrays
-const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
-console.log('menu', menu);
+// console.log(...newArr);
+// console.log(1, 2, 7, 8, 9);
 
-// Iterables: arrays, strings, maps, sets. Not objects
-const str = 'Jonas';
-const letters = [...str, ' ', 'S.'];
-console.log(letters);
-console.log(...str);
-// console.log(`${...str} Schmedtmann`);
+// const newMenu = [...restaurant.mainMenu, 'Gnocci'];
+// console.log(newMenu);
 
-// Real-world example
-const ingredients = [
-  // prompt("Let's make pasta! Ingredient 1?"),
-  // prompt("Let's make pasta! Ingredient 2?"),
-  // prompt("Let's make pasta! Ingredient 3?"),
-];
+// // Copy array
+// const mainMenuCopy = [...restaurant.mainMenu];
 
-console.log(ingredients);
+// // Join 2 arrays
+// const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+// console.log('menu', menu);
 
-restaurant.orderPasta(ingredients[0], ingredients[1], ingredients[2]);
-restaurant.orderPasta(...ingredients);
+// // Iterables: arrays, strings, maps, sets. Not objects
+// const str = 'Jonas';
+// const letters = [...str, ' ', 'S.'];
+// console.log(letters);
+// console.log(...str);
+// // console.log(`${...str} Schmedtmann`);
 
-// Objects
-const newRestaurant = { foundedIn: 1998, ...restaurant, founder: 'Guiseppe' };
-console.log(newRestaurant);
+// // Real-world example
+// const ingredients = [
+//   // prompt("Let's make pasta! Ingredient 1?"),
+//   // prompt("Let's make pasta! Ingredient 2?"),
+//   // prompt("Let's make pasta! Ingredient 3?"),
+// ];
+
+// console.log(ingredients);
+
+// restaurant.orderPasta(ingredients[0], ingredients[1], ingredients[2]);
+// restaurant.orderPasta(...ingredients);
+
+// // Objects
+// const newRestaurant = { foundedIn: 1998, ...restaurant, founder: 'Guiseppe' };
+// console.log(newRestaurant);
+
+// const restaurantCopy = { ...restaurant };
+// restaurantCopy.name = 'Ristorante Roma';
+// console.log(restaurantCopy.name);
+// console.log(restaurant.name);
 
 /////////////////////////////////////////////////////////
 // Destructuring Objects
