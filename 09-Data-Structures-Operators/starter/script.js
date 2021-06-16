@@ -46,6 +46,16 @@ const restaurant = {
   },
 };
 
+const properties = Object.keys(openingHours);
+console.log(properties);
+
+let openStr = `We are open on ${properties.length} days: `;
+
+for (const day of properties) {
+  openStr += `${day}, `;
+}
+console.log(openStr);
+
 // for (const day of Object.keys(openingHours))
 
 /////////////////////////////////////////////////////////
