@@ -46,6 +46,11 @@ const restaurant = {
   },
 };
 
+const rest = new Map();
+rest.set('name', 'Classico Italiano');
+rest.set(1, 'Firenze, Italy');
+console.log(rest.set(2, 'Lisbon, Portugal'));
+
 // Property NAMES
 // const properties = Object.keys(openingHours);
 // console.log(properties);
