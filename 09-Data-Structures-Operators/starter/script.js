@@ -58,6 +58,28 @@ const passengerCorrect =
   passengerLower[0].toUpperCase() + passengerLower.slice(1);
 console.log(passengerCorrect);
 
+// Comparing email
+const email = 'hello@jonas.io';
+const loginEmail = '   Hello@Jonas.Io \n';
+
+// const lowerEmail = loginEmail.toLowerCase();
+// const trimmedEmail = lowerEmail.trim();
+
+const normalizedEmail = loginEmail.toLowerCase().trim();
+console.log(normalizedEmail);
+console.log(email === normalizedEmail);
+
+// replacing
+const priceGB = '288,97£';
+const priceUS = priceGB.replace('£', '$').replace(',', '.');
+console.log(priceUS);
+
+const annoucement =
+  'All passengers come to boarding door 23. Boarding door 23!';
+
+console.log(annoucement.replace('door', 'gate'));
+console.log(annoucement.replaceAll('door', 'gate'));
+console.log(annoucement.replace(/door/g, 'gate'));
 ///////////////////////////////////////
 // Working with Strings - Part 1
 
