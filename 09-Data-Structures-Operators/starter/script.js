@@ -80,6 +80,23 @@ const annoucement =
 console.log(annoucement.replace('door', 'gate'));
 console.log(annoucement.replaceAll('door', 'gate'));
 console.log(annoucement.replace(/door/g, 'gate'));
+
+// Booleans
+const plane = 'Airbus A320';
+console.log(plane.includes('A320'));
+console.log(plane.includes('Boeing'));
+console.log(plane.startsWith('Air'));
+
+if (plane.startsWith('Airbus') && plane.endsWith('neo')) {
+  console.log('Part of the NEW Airbus family');
+}
+
+// Practice exercise
+const checkBaggage = function (items) {};
+checkBaggage('I have a laptop, some Food and a pocket Knife');
+checkBaggage('Socks and camera');
+checkBaggage('Got some snacks and a gun for protection');
+
 ///////////////////////////////////////
 // Working with Strings - Part 1
 
