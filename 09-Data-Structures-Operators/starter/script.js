@@ -46,63 +46,66 @@ const restaurant = {
   },
 };
 
-const airline = 'TAP Air Portugal';
+///////////////////////////////////////
+// Working with Strings - Part 2
 
-console.log(airline.toLowerCase());
-console.log(airline.toUpperCase());
+// const airline = 'TAP Air Portugal';
 
-// Fix capitalization in name
-const passenger = 'jOnAS';
-const passengerLower = passenger.toLowerCase();
-const passengerCorrect =
-  passengerLower[0].toUpperCase() + passengerLower.slice(1);
-console.log(passengerCorrect);
+// console.log(airline.toLowerCase());
+// console.log(airline.toUpperCase());
 
-// Comparing email
-const email = 'hello@jonas.io';
-const loginEmail = '   Hello@Jonas.Io \n';
+// // Fix capitalization in name
+// const passenger = 'jOnAS';
+// const passengerLower = passenger.toLowerCase();
+// const passengerCorrect =
+//   passengerLower[0].toUpperCase() + passengerLower.slice(1);
+// console.log(passengerCorrect);
 
-// const lowerEmail = loginEmail.toLowerCase();
-// const trimmedEmail = lowerEmail.trim();
+// // Comparing email
+// const email = 'hello@jonas.io';
+// const loginEmail = '   Hello@Jonas.Io \n';
 
-const normalizedEmail = loginEmail.toLowerCase().trim();
-console.log(normalizedEmail);
-console.log(email === normalizedEmail);
+// // const lowerEmail = loginEmail.toLowerCase();
+// // const trimmedEmail = lowerEmail.trim();
 
-// replacing
-const priceGB = '288,97£';
-const priceUS = priceGB.replace('£', '$').replace(',', '.');
-console.log(priceUS);
+// const normalizedEmail = loginEmail.toLowerCase().trim();
+// console.log(normalizedEmail);
+// console.log(email === normalizedEmail);
 
-const annoucement =
-  'All passengers come to boarding door 23. Boarding door 23!';
+// // replacing
+// const priceGB = '288,97£';
+// const priceUS = priceGB.replace('£', '$').replace(',', '.');
+// console.log(priceUS);
 
-console.log(annoucement.replace('door', 'gate'));
-console.log(annoucement.replaceAll('door', 'gate'));
-console.log(annoucement.replace(/door/g, 'gate'));
+// const annoucement =
+//   'All passengers come to boarding door 23. Boarding door 23!';
 
-// Booleans
-const plane = 'Airbus A320';
-console.log(plane.includes('A320'));
-console.log(plane.includes('Boeing'));
-console.log(plane.startsWith('Air'));
+// console.log(annoucement.replace('door', 'gate'));
+// console.log(annoucement.replaceAll('door', 'gate'));
+// console.log(annoucement.replace(/door/g, 'gate'));
 
-if (plane.startsWith('Airbus') && plane.endsWith('neo')) {
-  console.log('Part of the NEW Airbus family');
-}
+// // Booleans
+// const plane = 'Airbus A320';
+// console.log(plane.includes('A320'));
+// console.log(plane.includes('Boeing'));
+// console.log(plane.startsWith('Air'));
 
-// Practice exercise
-const checkBaggage = function (items) {
-  const baggage = items.toLowerCase();
-  if (baggage.includes('knife') || baggage.includes('gun')) {
-    console.log('You are NOT allowed on board');
-  } else {
-    console.log('Welcome aboard!');
-  }
-};
-checkBaggage('I have a laptop, some Food and a pocket Knife');
-checkBaggage('Socks and camera');
-checkBaggage('Got some snacks and a gun for protection');
+// if (plane.startsWith('Airbus') && plane.endsWith('neo')) {
+//   console.log('Part of the NEW Airbus family');
+// }
+
+// // Practice exercise
+// const checkBaggage = function (items) {
+//   const baggage = items.toLowerCase();
+//   if (baggage.includes('knife') || baggage.includes('gun')) {
+//     console.log('You are NOT allowed on board');
+//   } else {
+//     console.log('Welcome aboard!');
+//   }
+// };
+// checkBaggage('I have a laptop, some Food and a pocket Knife');
+// checkBaggage('Socks and camera');
+// checkBaggage('Got some snacks and a gun for protection');
 
 ///////////////////////////////////////
 // Working with Strings - Part 1
