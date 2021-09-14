@@ -47,6 +47,16 @@ const restaurant = {
 };
 
 ///////////////////////////////////////
+// Working with Strings - Part 3
+
+console.log('a+very+nice+string'.split('+'));
+console.log('Victor Huynh'.split(' '));
+
+const [firstName, lastName] = 'Victor Huynh'.split(' ');
+console.log(firstName);
+console.log(lastName);
+
+///////////////////////////////////////
 // Working with Strings - Part 2
 
 // const airline = 'TAP Air Portugal';
