@@ -49,12 +49,14 @@ const restaurant = {
 ///////////////////////////////////////
 // Working with Strings - Part 3
 
+// Split and join
 console.log('a+very+nice+string'.split('+'));
 console.log('Victor Huynh'.split(' '));
 
 const [firstName, lastName] = 'Victor Huynh'.split(' ');
-console.log(firstName);
-console.log(lastName);
+
+const newName = ['Mr.', firstName, lastName.toUpperCase()].join(' ');
+console.log(newName);
 
 ///////////////////////////////////////
 // Working with Strings - Part 2
