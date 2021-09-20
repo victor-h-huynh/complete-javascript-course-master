@@ -94,22 +94,35 @@ const button = document.querySelector('button');
 // }
 
 // Second Attempt
-document.querySelector('button').addEventListener('click', function () {
+// document.querySelector('button').addEventListener('click', function () {
+//   const text = document.querySelector('textarea').value;
+//   const rows = text.split('\n');
+//   for (const [i, row] of rows.entries()) {
+//       //Looping through array
+//     let [first, second] = row.toLowerCase().split('_');
+//       // Destructing each element at '_'
+//     // let camelCase = second.charAt(0).toUpperCase() + second.slice(1);
+//       // 2 ways to camelCase
+//     let camelCase = second.replace(second[0], second[0].toUpperCase());
+//     let trimmedCamelCase = first.concat(camelCase).trim();
+//     let padTrimmedCamelCase = trimmedCamelCase.padEnd(20, ' ');
+//     let final = padTrimmedCamelCase.padEnd(21 + i, '✅')
+//     console.log(final)
+//   }
+// })
+
+// Solution
+document.querySelector('button').addEventListener('click', function() {
   const text = document.querySelector('textarea').value;
   const rows = text.split('\n');
-  for (const [i, row] of rows.entries()) {
-      //Looping through array
-    let [first, second] = row.toLowerCase().split('_');
-      // Destructing each element at '_'
-    // let camelCase = second.charAt(0).toUpperCase() + second.slice(1);
-      // 2 ways to camelCase
-    let camelCase = second.replace(second[0], second[0].toUpperCase());
-    let trimmedCamelCase = first.concat(camelCase).trim();
-    let padTrimmedCamelCase = trimmedCamelCase.padEnd(20, ' ');
-    let final = padTrimmedCamelCase.padEnd(21 + i, '✅')
-    console.log(final)
+  console.log(rows);
+
+  for (const row in rows) {
+    const [first, second] = row.toLowerCase().trim().split('_');
+    const output = `${first}${second.replace(second[0], second[0].toUpperCase())}`
+    console.log(output);
   }
-})
+});
 
 ///////////////////////////////////////
 // Working with Strings - Part 3
