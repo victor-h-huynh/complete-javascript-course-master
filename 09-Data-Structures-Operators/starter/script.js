@@ -97,13 +97,17 @@ const button = document.querySelector('button');
 document.querySelector('button').addEventListener('click', function () {
   const text = document.querySelector('textarea').value;
   const rows = text.split('\n');
-  for (const row of rows) {
+  for (const [i, row] of rows.entries()) {
       //Looping through array
     let [first, second] = row.toLowerCase().split('_');
       // Destructing each element at '_'
-    let camelCase = second.charAt(0).toUpperCase() + second.slice(1);
+    // let camelCase = second.charAt(0).toUpperCase() + second.slice(1);
+      // 2 ways to camelCase
+    let camelCase = second.replace(second[0], second[0].toUpperCase());
     let trimmedCamelCase = first.concat(camelCase).trim();
-    console.log(trimmedCamelCase)
+    let padTrimmedCamelCase = trimmedCamelCase.padEnd(20, ' ');
+    let final = padTrimmedCamelCase.padEnd(21 + i, '✅')
+    console.log(final)
   }
 })
 
