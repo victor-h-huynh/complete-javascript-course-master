@@ -83,13 +83,25 @@ document.body.append(document.createElement('button'));
 
 const button = document.querySelector('button');
 
-button.onclick = function convertToCamelCase () {
-  const text = document.querySelector('textarea').value;
-  let splitStr = text.toLowerCase().split('_');
-  let camelCase = splitStr[1].toUpperCase();
-  console.log(camelCase);
+// First Attempt
+// button.onclick = function convertToCamelCase () {
+  // const text = document.querySelector('textarea').value;
+  // console.log(text);
+  // let [first, second] = text.toLowerCase().split('_');
+  // let camelCase = second.charAt(0).toUpperCase() + second.slice(1);
+  // let trimmedCamelCase = first.concat(camelCase).trim();
+  // console.log(trimmedCamelCase)
+// }
 
-}
+// Second Attempt
+document.querySelector('button').addEventListener('click', function () {
+  const text = document.querySelector('textarea').value;
+  console.log(text);
+  let [first, second] = text.toLowerCase().split('_');
+  let camelCase = second.charAt(0).toUpperCase() + second.slice(1);
+  let trimmedCamelCase = first.concat(camelCase).trim();
+  console.log(trimmedCamelCase)
+})
 
 // const btn = document.querySelector('button');
 
