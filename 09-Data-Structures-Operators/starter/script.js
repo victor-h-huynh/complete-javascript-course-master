@@ -96,18 +96,16 @@ const button = document.querySelector('button');
 // Second Attempt
 document.querySelector('button').addEventListener('click', function () {
   const text = document.querySelector('textarea').value;
-  console.log(text);
-  let [first, second] = text.toLowerCase().split('_');
-  let camelCase = second.charAt(0).toUpperCase() + second.slice(1);
-  let trimmedCamelCase = first.concat(camelCase).trim();
-  console.log(trimmedCamelCase)
+  const rows = text.split('\n');
+  for (const row of rows) {
+      //Looping through array
+    let [first, second] = row.toLowerCase().split('_');
+      // Destructing each element at '_'
+    let camelCase = second.charAt(0).toUpperCase() + second.slice(1);
+    let trimmedCamelCase = first.concat(camelCase).trim();
+    console.log(trimmedCamelCase)
+  }
 })
-
-// const btn = document.querySelector('button');
-
-// btn.onClick = function() {
-//   console.log(text);
-// }
 
 ///////////////////////////////////////
 // Working with Strings - Part 3
