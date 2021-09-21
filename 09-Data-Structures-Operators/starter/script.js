@@ -111,17 +111,49 @@ const button = document.querySelector('button');
 //   }
 // })
 
-// Solution
-document.querySelector('button').addEventListener('click', function() {
+// Row Example
+// const rows = text.split('\n');
+// console.log(rows);
+// Places the inputed text value into an array 
+// ['underscore_case', ' first_name', 'Some_Variable ', '  calculate_AGE', 'delayed_departure']
+// Split Example
+    // let splitExample = row.split('_');
+// Result
+    // (2) ['underscore', 'case']
+    // (2) [' first', 'name']
+    // (2) ['Some', 'Variable ']
+    // (2) ['  calculate', 'AGE']
+    // (2) ['delayed', 'departure']
+    // console.log(splitExample)
+
+// Revised
+document.querySelector('button').addEventListener('click', function () {
   const text = document.querySelector('textarea').value;
   const rows = text.split('\n');
-
   for (const [i, row] of rows.entries()) {
-    const [first, second] = row.toLowerCase().trim().split('_');
-    const output = `${first}${second.replace(second[0], second[0].toUpperCase())}`
-    console.log(`${output.padEnd(20)}${'✅'.repeat(i + 1)}`);
+      //Looping through array
+    let [first, second] = row.toLowerCase().trim().split('_');
+      // Destructing each element at '_'
+    // 2 ways to camelCase
+    // let camelCase = second.charAt(0).toUpperCase() + second.slice(1);
+    let camelCase = second.replace(second[0], second[0].toUpperCase());
+    let padCamelCase = first.concat(camelCase).padEnd(20);
+    let final = padCamelCase.padEnd(21 + i, '✅')
+    console.log(final)
   }
-});
+})
+
+// Solution
+// document.querySelector('button').addEventListener('click', function() {
+//   const text = document.querySelector('textarea').value;
+//   const rows = text.split('\n');
+
+//   for (const [i, row] of rows.entries()) {
+//     const [first, second] = row.toLowerCase().trim().split('_');
+//     const output = `${first}${second.replace(second[0], second[0].toUpperCase())}`
+//     console.log(`${output.padEnd(20)}${'✅'.repeat(i + 1)}`);
+//   }
+// });
 
 ///////////////////////////////////////
 // Working with Strings - Part 3
