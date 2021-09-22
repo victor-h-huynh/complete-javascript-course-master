@@ -55,3 +55,7 @@
 // newPassport(jonas);
 // console.log(jonas);
 // checkIn(flight, jonas);
+
+///////////////////////////////////////////////////////
+// Functions Accepting Callback Functions
+
