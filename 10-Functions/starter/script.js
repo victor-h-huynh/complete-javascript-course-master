@@ -92,14 +92,19 @@
 // Functions Returning Functions
 
 const greet = function(greeting) {
-    return function (name, message) {
-        console.log(`${greeting} ${name} ${message}`);
+    return function (name) {
+        console.log(`${greeting} ${name}`)
     }
 };
 
 const greeterHey = greet('Hey');
-console.log(greet('Hey'));
 greeterHey('Jonas');
 greeterHey('Steven');
 
-greet('Hello')('Jonas', 'Lovely Day');
+greet('Hello')('Jonas');
+
+// Challenge
+const greetArr = greeting => name => console.log(`${greeting} ${name}`);
+
+greetArr('Hi')('Jonas');
+
