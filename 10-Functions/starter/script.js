@@ -91,20 +91,23 @@
 ///////////////////////////////////////////////////////
 // Functions Returning Functions
 
-const greet = function(greeting) {
-    return function (name) {
-        console.log(`${greeting} ${name}`)
-    }
-};
+// const greet = function(greeting) {
+//     return function (name) {
+//         console.log(`${greeting} ${name}`)
+//     }
+// };
 
-const greeterHey = greet('Hey');
-greeterHey('Jonas');
-greeterHey('Steven');
+// const greeterHey = greet('Hey');
+// greeterHey('Jonas');
+// greeterHey('Steven');
 
-greet('Hello')('Jonas');
+// greet('Hello')('Jonas');
 
-// Challenge
-const greetArr = greeting => name => console.log(`${greeting} ${name}`);
+// // Challenge
+// const greetArr = greeting => name => console.log(`${greeting} ${name}`);
 
-greetArr('Hi')('Jonas');
+// greetArr('Hi')('Jonas');
+
+///////////////////////////////////////////////////////
+// The call and apply Methods
 
