@@ -241,9 +241,46 @@ BONUS TEST DATA 2: [1, 5, 3, 9, 6, 1]
 GOOD LUCK 😀
 */
 
-const poll = {
-  question: 'What is your favourite programming language?',
-  options: ['0: JavaScript', '1: Python', '2: Rust', '3: C++'],
-  // This generates [0, 0, 0, 0]. More in the next section 😃
-  answers: new Array(4).fill(0),
-};
+// First attempt
+
+// const poll = {
+//   question: 'What is your favourite programming language?',
+//   options: ['0: JavaScript', '1: Python', '2: Rust', '3: C++'],
+//   // This generates [0, 0, 0, 0]. More in the next section 😃
+//   answers: new Array(4).fill(0),
+//   registerNewAnswer() {
+//     const answer = Number(prompt(`${this.question}\n ${this.options.join('\n')}\n(Write option number)`));
+//     if(answer === 0) {
+//       this.answers[0]++;
+//     } else if (answer === 1){
+//       this.answers[1]++;
+//     } else if (answer === 2) {
+//       this.answers[2]++
+//     } else if (answer === 3) {
+//       this.answers[3]++;
+//     }
+//     this.displayResults();
+//     this.displayResults('string');
+//   },
+//   displayResults(type = 'array') {
+//     if(type === 'array') {
+//       console.log(this.answers)
+//     } else if (type === 'string') {
+//       console.log(`Poll results are ${this.answers.join(', ')}`)
+//     }
+//   }
+// };
+
+// const pollButton = document.getElementsByClassName('poll')[0];
+// const register = poll.registerNewAnswer;
+// pollButton.addEventListener('click', register.bind(poll))
+// // console.log(poll.registerNewAnswer());
+// poll.displayResults('array');
+// poll.displayResults('string');
+
+// const showResults = poll.displayResults;
+
+// const testData1 = [5, 2, 3];
+// poll.answers.splice(0, poll.answers.length, ...testData1);
+// const testData2 = [1, 5, 3, 9, 6, 1];
+
