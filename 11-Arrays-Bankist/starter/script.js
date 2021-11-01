@@ -183,21 +183,39 @@ GOOD LUCK 😀
 */
 
 // First attempt
-function checkDogs(dogsJulia, dogsKate) {
-  const realDogs = dogsJulia.slice(1, -2)
-  realDogs.forEach(function(dog, i) {
-    const adultOrPuppy = dog > 2 ? 'adult' : 'puppy';
-    const result = adultOrPuppy === 'adult' ? `Dog number ${i + 1} is an ${adultOrPuppy}, and is ${dog} years old` : `Dog number ${i + 1} is still a puppy 🐶`
-    console.log(result);
-  })
-  dogsKate.forEach(function(dog, i) {
-    const adultOrPuppy = dog > 2 ? 'adult' : 'puppy'
-    const result = adultOrPuppy === 'adult' ? `Dog number ${i + 1} is an ${adultOrPuppy}, and is ${dog} years old` : `Dog number ${i + 1} is still a puppy 🐶`
-    console.log(result);
-  })
-}
+// const checkDogs = function (dogsJulia, dogsKate) {
+//   const realDogs = dogsJulia.slice(1, -2)
+//   const dogs = realDogs.concat(dogsKate);
+//   console.log(dogs);
 
-checkDogs([3, 5, 2, 12, 7], [4, 1, 15, 8, 3])
-checkDogs([9, 16, 6, 8, 3], [10, 5, 6, 1, 4])
+//   dogs.forEach(function(dog, i) {
+//     if(dog >= 3) {
+//       console.log(`Dog number ${i + 1} is an adult, and is ${dog} years old`)
+//     } else {
+//       console.log(`Dog number ${i + 1} is still a puppy 🐶`)
+//     }
+//   });
+// }
+
+// checkDogs([3, 5, 2, 12, 7], [4, 1, 15, 8, 3])
+// checkDogs([9, 16, 6, 8, 3], [10, 5, 6, 1, 4])
 
 // Answer
+// const checkDogs = function(dogsJulia, dogsKate) {
+//   const dogsJuliaCorrected = dogsJulia.slice();
+//   dogsJuliaCorrected.splice(0, 1);
+//   dogsJuliaCorrected.splice(-2);
+//   const dogs = dogsJuliaCorrected.concat(dogsKate);
+//   console.log(dogs);
+
+//   //("Dog number 1 is an adult, and is 5 years old") or a puppy ("Dog number 2 is still a puppy 🐶")
+//   dogs.forEach(function(dog, i) {
+//     if(dog >= 3) {
+//       console.log(`Dog number ${i + 1} is an adult, and is 5 years old`);
+//     } else {
+//       console.log(`Dog number ${i + 1} is still a puppy 🐶`);
+//     }
+//   })
+// }
+// checkDogs([3, 5, 2, 12, 7], [4, 1, 15, 8, 3])
+// checkDogs([9, 16, 6, 8, 3], [10, 5, 6, 1, 4])
