@@ -342,7 +342,3 @@ const calcAverageHumanAge = function(ages) {
 };
 
 console.log(calcAverageHumanAge(testData1));
-
-// .reduce(function(age, curr) {
-//   return age + curr;
-// })
