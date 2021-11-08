@@ -578,6 +578,8 @@ GOOD LUCK 😀
 //   }
 // }
 
+
+// SOME AND EVERY
 console.log(movements);
 
 // EQUALITY
