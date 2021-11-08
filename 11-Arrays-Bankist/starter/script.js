@@ -120,7 +120,7 @@ const updateUI = function(acc) {
   calcDisplaySummary(acc);
 }
 
-// Event handler
+// Event handlers
 let currentAccount;
 
 btnLogin.addEventListener('click', function(e) {
@@ -165,8 +165,27 @@ btnTransfer.addEventListener('click', function(e) {
     // Update UI
     updateUI(currentAccount)
   }
-})
+});
 
+btnClose.addEventListener('click', function(e) {
+  e.preventDefault();
+  console.log(inputCloseUsername.value);
+  console.log(inputClosePin.value);
+  const confirmUser = accounts.findIndex(acc => acc.username === inputCloseUsername.value);
+  const confirmPin = accounts.findIndex(acc => acc.pin === Number(inputClosePin.value));
+  console.log(confirmUser);
+  console.log(confirmPin);
+  // console.log(accounts.findIndex(acc => acc.username === inputCloseUsername.value) && accounts.findIndex(acc => acc.pin === Number(inputClosePin.value)));
+  if(
+    confirmUser >= 0 && confirmPin >= 0
+    ) {
+    accounts.splice(confirmUser, 1);
+  }
+  console.log(accounts);
+});
+
+// findIndex
+// Splice
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
