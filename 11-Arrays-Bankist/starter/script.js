@@ -649,8 +649,8 @@ console.log(movements);
 //     return -1;
 // })
 
-movements.sort((a, b) => a - b)
-console.log(movements);
+// movements.sort((a, b) => a - b)
+// console.log(movements);
 
 // Descending
 // movements.sort((a, b) => {
@@ -660,6 +660,6 @@ console.log(movements);
 //     return 1;
 // })
 
-movements.sort((a, b) => b - a)
+// movements.sort((a, b) => b - a)
 
-console.log(movements);
+// console.log(movements);
