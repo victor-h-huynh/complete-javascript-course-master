@@ -167,22 +167,41 @@ btnTransfer.addEventListener('click', function(e) {
   }
 });
 
+// First attempt
+// btnClose.addEventListener('click', function(e) {
+//   e.preventDefault();
+//   console.log(inputCloseUsername.value);
+//   console.log(inputClosePin.value);
+//   const confirmUser = accounts.findIndex(acc => acc.username === inputCloseUsername.value);
+//   const confirmPin = accounts.findIndex(acc => acc.pin === Number(inputClosePin.value));
+//   console.log(confirmUser);
+//   console.log(confirmPin);
+//   // console.log(accounts.findIndex(acc => acc.username === inputCloseUsername.value) && accounts.findIndex(acc => acc.pin === Number(inputClosePin.value)));
+//   if(
+//     confirmUser >= 0 && confirmPin >= 0
+//     ) {
+//     accounts.splice(confirmUser, 1);
+//   }
+//   console.log(accounts);
+// });
+
+// Answer
 btnClose.addEventListener('click', function(e) {
   e.preventDefault();
-  console.log(inputCloseUsername.value);
-  console.log(inputClosePin.value);
-  const confirmUser = accounts.findIndex(acc => acc.username === inputCloseUsername.value);
-  const confirmPin = accounts.findIndex(acc => acc.pin === Number(inputClosePin.value));
-  console.log(confirmUser);
-  console.log(confirmPin);
-  // console.log(accounts.findIndex(acc => acc.username === inputCloseUsername.value) && accounts.findIndex(acc => acc.pin === Number(inputClosePin.value)));
-  if(
-    confirmUser >= 0 && confirmPin >= 0
-    ) {
-    accounts.splice(confirmUser, 1);
+
+  if(inputCloseUsername.value === currentAccount.username && Number(inputClosePin.value) === currentAccount.pin) {
+    const index = accounts.findIndex(acc => acc.username === currentAccount.username)
+    console.log(index);
+
+    // Delete account
+    accounts.splice(index, 1);
+
+    // Hide UI
+    containerApp.style.opacity = 0;
   }
-  console.log(accounts);
-});
+
+  inputCloseUsername.value = inputClosePin.value = '';
+})
 
 // findIndex
 // Splice
