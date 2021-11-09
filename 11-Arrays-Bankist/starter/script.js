@@ -702,3 +702,15 @@ GOOD LUCK 😀
 //   const movementsUI2 = [...document.querySelectorAll('.movements__value')].map(el => Number(el.textContent.replace('€', '')));
 //   console.log(movementsUI2);
 // });
+
+///////////////////////////////////////
+// Array Methods Practice
+
+console.log(accounts);
+
+const bankDepositSum = accounts
+.flatMap(acc => acc.movements)
+.filter(mov => mov > 0)
+.reduce((sum, cur) => (sum + cur), 0)
+
+console.log(bankDepositSum);
