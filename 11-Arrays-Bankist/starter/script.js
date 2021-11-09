@@ -681,8 +681,8 @@ const x = new Array(7);
 console.log(x);
 // console.log(x.map(() => 5));
 x.fill(1, 3, 5);
-x.fill(1);
-console.log(x);
+// x.fill(1);
+console.log('x', x);
 
 arr.fill(23, 2, 6)
 console.log(arr);
@@ -694,3 +694,11 @@ console.log(y);
 const z = Array.from({length: 7}, (cur, i) => i + 1)
 console.log(z);
 
+labelBalance.addEventListener('click', function() {
+  const movementsUI = Array.from(document.querySelectorAll('.movements__value'), el => Number(el.textContent.replace('€', '')));
+
+  console.log(movementsUI);
+
+  const movementsUI2 = [...document.querySelectorAll('.movements__value')].map(el => Number(el.textContent.replace('€', '')));
+  console.log(movementsUI2);
+});
