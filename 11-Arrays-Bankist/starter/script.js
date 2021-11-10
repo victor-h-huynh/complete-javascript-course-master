@@ -809,14 +809,14 @@ const dogs = [
   { weight: 32, curFood: 340, owners: ['Michael'] }
 ];
 console.log(dogs);
-//1. 
+// 1. 
 // First Attempt
 // dogs.recommendedFood = dogs.map(dog => (dog.weight ** 0.75 * 28) / 1000)
 
 // Answer
 dogs.forEach(dog => dog.recommendedFood = Math.trunc(dog.weight ** 0.75 * 28)) 
 
-//2.
+// 2.
 // First Attempt
 // function recommendedPortion (dog) {
 //   dog.curFood > dog.recommendedFood ? console.log('Dog eats too much') : console.log('Dog eats too little')
@@ -832,3 +832,10 @@ dogs.forEach(dog => dog.recommendedFood = Math.trunc(dog.weight ** 0.75 * 28))
 // const dogSarah = dogs.find(dog => dog.owners.includes('Sarah'));
 // console.log(dogSarah);
 // console.log(`Sarah's dog is eating too ${dogSarah.curFood > dogSarah.recommendedFood ? 'much' : 'little'}`)
+
+// 3. First attempt
+const ownersEatTooMuch = dogs.filter(dog => dog.curFood > dog.recommendedFood)
+console.log(ownersEatTooMuch);
+
+const ownersEatTooLittle = dogs.filter(dog => dog.curFood < dog.recommendedFood)
+console.log(ownersEatTooLittle)
