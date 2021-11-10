@@ -829,9 +829,9 @@ dogs.forEach(dog => dog.recommendedFood = Math.trunc(dog.weight ** 0.75 * 28))
 // recommendedPortion(sarahDog)
 
 // Answer
-// const dogSarah = dogs.find(dog => dog.owners.includes('Sarah'));
-// console.log(dogSarah);
-// console.log(`Sarah's dog is eating too ${dogSarah.curFood > dogSarah.recommendedFood ? 'much' : 'little'}`)
+const dogSarah = dogs.find(dog => dog.owners.includes('Sarah'));
+console.log(dogSarah);
+console.log(`Sarah's dog is eating too ${dogSarah.curFood > dogSarah.recommendedFood ? 'much' : 'little'}`)
 
 // 3. First attempt
 // const ownersEatTooMuch = dogs
@@ -847,14 +847,20 @@ dogs.forEach(dog => dog.recommendedFood = Math.trunc(dog.weight ** 0.75 * 28))
 // console.log(ownersEatTooLittle)
 
 // Answer
-// const ownersEatTooMuch = dogs
-//   .filter(dog => dog.curFood > dog.recommendedFood)
-//   .flatMap(dog => dog.owners);
+const ownersEatTooMuch = dogs
+  .filter(dog => dog.curFood > dog.recommendedFood)
+  .flatMap(dog => dog.owners);
 
-// console.log(ownersEatTooMuch);
+console.log(ownersEatTooMuch);
 
-// const ownersEatTooLittle = dogs
-//   .filter(dog => dog.curFood < dog.recommendedFood)
-//   .flatMap(dog => dog.owners)
+const ownersEatTooLittle = dogs
+  .filter(dog => dog.curFood < dog.recommendedFood)
+  .flatMap(dog => dog.owners)
 
-// console.log(ownersEatTooLittle)
+console.log(ownersEatTooLittle)
+
+// Log a string to the console for each array created in 3., like this: "Matilda and Alice and Bob's dogs eat too much!" and "Sarah and John and Michael's dogs eat too little!"
+
+console.log(`${ownersEatTooMuch.join(' and ')}'s' dogs eat too much!'`);
+
+console.log(`${ownersEatTooLittle.join(' and ')}'s' dogs eat too little!'`);
