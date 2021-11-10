@@ -859,8 +859,14 @@ const ownersEatTooLittle = dogs
 
 console.log(ownersEatTooLittle)
 
-// Log a string to the console for each array created in 3., like this: "Matilda and Alice and Bob's dogs eat too much!" and "Sarah and John and Michael's dogs eat too little!"
-
+// 4. First Attempt
 console.log(`${ownersEatTooMuch.join(' and ')}'s' dogs eat too much!'`);
 
 console.log(`${ownersEatTooLittle.join(' and ')}'s' dogs eat too little!'`);
+
+// 5. First Attempt
+const exactFood = dogs.forEach(dog => {
+  console.log(dog.curFood === dog.recommendedFood);
+})
+
+console.log(exactFood);
