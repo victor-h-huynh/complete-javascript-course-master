@@ -706,31 +706,31 @@ GOOD LUCK 😀
 ///////////////////////////////////////
 // Array Methods Practice
 
-console.log(accounts);
+// console.log(accounts);
 
-// 1.
-const bankDepositSum = accounts
-.flatMap(acc => acc.movements)
-.filter(mov => mov > 0)
-.reduce((sum, cur) => (sum + cur), 0);
+// // 1.
+// const bankDepositSum = accounts
+// .flatMap(acc => acc.movements)
+// .filter(mov => mov > 0)
+// .reduce((sum, cur) => (sum + cur), 0);
 
-console.log(bankDepositSum);
+// console.log(bankDepositSum);
 
-// 2.
+// // 2.
+// // const numDeposits1000 = accounts
+// // .flatMap(acc => acc.movements)
+// // .filter(mov => mov >= 1000).length;
+
 // const numDeposits1000 = accounts
 // .flatMap(acc => acc.movements)
-// .filter(mov => mov >= 1000).length;
+// .reduce((count, cur) => (cur >= 1000 ? ++count : count) , 0)
 
-const numDeposits1000 = accounts
-.flatMap(acc => acc.movements)
-.reduce((count, cur) => (cur >= 1000 ? ++count : count) , 0)
+// console.log(numDeposits1000);
 
-console.log(numDeposits1000);
-
-// Prefixed ++ operator
-let a = 10;
-console.log(++a);
-console.log(a);
+// // Prefixed ++ operator
+// let a = 10;
+// console.log(++a);
+// console.log(a);
 
 // 3.
 // const sums = accounts
@@ -801,3 +801,24 @@ const dogs = [
 
 GOOD LUCK 😀
 */
+
+const dogs = [
+  { weight: 22, curFood: 250, owners: ['Alice', 'Bob'] },
+  { weight: 8, curFood: 200, owners: ['Matilda'] },
+  { weight: 13, curFood: 275, owners: ['Sarah', 'John'] },
+  { weight: 32, curFood: 340, owners: ['Michael'] }
+];
+console.log(dogs);
+//1. 
+// First Attempt
+// dogs.recommendedFood = dogs.map(dog => (dog.weight ** 0.75 * 28) / 1000)
+
+// Answer
+dogs.forEach(dog => dog.recommendedFood = Math.trunc(dog.weight ** 0.75 * 28)) 
+
+//2.
+// First Attempt
+const owners = dogs.find((dog) => {
+  console.log('dog', dog.owners)
+})
+console.log(owners);
