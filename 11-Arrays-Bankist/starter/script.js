@@ -877,4 +877,4 @@ console.log(dogs.some(dog => dog.curFood === dog.recommendedFood))
 // 6. First Attempt
 console.log(dogs.some(dog => dog.curFood > dog.recommendedFood * 0.90 && dog.curFood < dog.recommendedFood * 1.1))
 
-// current > (recommended * 0.90) && current < (recommended * 1.10)
+// 7. First Attempt
