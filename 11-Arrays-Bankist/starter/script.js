@@ -818,12 +818,17 @@ dogs.forEach(dog => dog.recommendedFood = Math.trunc(dog.weight ** 0.75 * 28))
 
 //2.
 // First Attempt
-function recommendedPortion (dog) {
-  dog.curFood > (dog.recommendedFood * 0.90) && dog.curFood < (dog.recommendedFood * 1.10) ? console.log('Dog eats enough') : console.log('Dog eats too little')
-};
+// function recommendedPortion (dog) {
+//   dog.curFood > dog.recommendedFood ? console.log('Dog eats too much') : console.log('Dog eats too little')
+// };
 
-const sarahDog = dogs.find((dog) => {
-  return dog.owners.includes('Sarah')
-})
+// const sarahDog = dogs.find((dog) => {
+//   return dog.owners.includes('Sarah')
+// })
 
-recommendedPortion(sarahDog)
+// recommendedPortion(sarahDog)
+
+// Answer
+// const dogSarah = dogs.find(dog => dog.owners.includes('Sarah'));
+// console.log(dogSarah);
+// console.log(`Sarah's dog is eating too ${dogSarah.curFood > dogSarah.recommendedFood ? 'much' : 'little'}`)
