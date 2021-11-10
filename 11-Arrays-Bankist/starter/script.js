@@ -834,8 +834,13 @@ dogs.forEach(dog => dog.recommendedFood = Math.trunc(dog.weight ** 0.75 * 28))
 // console.log(`Sarah's dog is eating too ${dogSarah.curFood > dogSarah.recommendedFood ? 'much' : 'little'}`)
 
 // 3. First attempt
-const ownersEatTooMuch = dogs.filter(dog => dog.curFood > dog.recommendedFood)
+const ownersEatTooMuch = dogs
+  .filter(dog => dog.curFood > dog.recommendedFood)
+  .flatMap(owner =>  owner.owners);
+
 console.log(ownersEatTooMuch);
 
-const ownersEatTooLittle = dogs.filter(dog => dog.curFood < dog.recommendedFood)
+const ownersEatTooLittle = dogs
+  .filter(dog => dog.curFood < dog.recommendedFood)
+  .flatMap(owner => owner.owners)
 console.log(ownersEatTooLittle)
