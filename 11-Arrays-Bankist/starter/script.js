@@ -865,8 +865,11 @@ console.log(`${ownersEatTooMuch.join(' and ')}'s' dogs eat too much!'`);
 console.log(`${ownersEatTooLittle.join(' and ')}'s' dogs eat too little!'`);
 
 // 5. First Attempt
-const exactFood = dogs.forEach(dog => {
-  console.log(dog.curFood === dog.recommendedFood);
-})
+// const exactFood = dogs.some(dog => {
+//   console.log(dog.curFood === dog.recommendedFood);
+// })
 
-console.log(exactFood);
+// console.log(exactFood);
+
+// Answer
+console.log(dogs.some(dog => dog.curFood === dog.recommendedFood))
