@@ -878,3 +878,4 @@ console.log(dogs.some(dog => dog.curFood === dog.recommendedFood))
 console.log(dogs.some(dog => dog.curFood > dog.recommendedFood * 0.90 && dog.curFood < dog.recommendedFood * 1.1))
 
 // 7. First Attempt
+// Create an array containing the dogs that are eating an OKAY amount of food (try to reuse the condition used in 6.)
