@@ -879,5 +879,9 @@ const checkEatingOkay = dog => dog.curFood > dog.recommendedFood * 0.90 && dog.c
 console.log(dogs.some(checkEatingOkay))
 
 // 7. First Attempt
-// Create an array containing the dogs that are eating an OKAY amount of food (try to reuse the condition used in 6.)
 console.log(dogs.filter(checkEatingOkay));
+
+// 8. Create a shallow copy of the dogs array and sort it by recommended food portion in an ascending order (keep in mind that the portions are inside the array's objects)
+
+const dogsCopy = dogs.slice().sort((a, b) => a.recommendedFood - b.recommendedFood)
+console.log(dogsCopy);
