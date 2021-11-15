@@ -253,3 +253,6 @@ btnSort.addEventListener('click', function (e) {
 // LECTURES
 
 console.log(23 === 23.0);
+
+// Base 10 - 0 to 9
+// Binary base 2 - 0 1
