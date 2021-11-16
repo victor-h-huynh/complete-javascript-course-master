@@ -324,6 +324,7 @@ btnSort.addEventListener('click', function (e) {
 // console.log(Math.floor(-23.3));
 
 // // Rounding decimals
+
 // console.log((2.7).toFixed(0));
 // console.log((2.7).toFixed(3));
 // console.log((2.345).toFixed(2));
@@ -356,3 +357,8 @@ btnSort.addEventListener('click', function (e) {
 //   });
 // });
 // Nth
+
+// Numeric Separators
+
+// 287,460,000,000
+const diameter = 287460000000;
