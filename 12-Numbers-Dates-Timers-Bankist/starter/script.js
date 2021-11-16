@@ -378,33 +378,67 @@ btnSort.addEventListener('click', function (e) {
 
 // Working with BigInt
 
-console.log(2 ** 53 - 1);
-console.log(Number.MAX_SAFE_INTEGER);
-console.log(2 ** 53 + 1);
-console.log(2 ** 53 + 2);
-console.log(2 ** 53 + 3);
-console.log(2 ** 53 + 4);
+// console.log(2 ** 53 - 1);
+// console.log(Number.MAX_SAFE_INTEGER);
+// console.log(2 ** 53 + 1);
+// console.log(2 ** 53 + 2);
+// console.log(2 ** 53 + 3);
+// console.log(2 ** 53 + 4);
 
-console.log(4864565456454353115151344645453546577n);
-console.log(BigInt(48384302));
+// console.log(4864565456454353115151344645453546577n);
+// console.log(BigInt(48384302));
 
-// Operations
-console.log(10000n + 10000n);
-console.log(4864565456454353115151344645453546577n * 1000000n);
-// console.log(Math.sqrt(16n));
+// // Operations
+// console.log(10000n + 10000n);
+// console.log(4864565456454353115151344645453546577n * 1000000n);
+// // console.log(Math.sqrt(16n));
 
-const huge = 4864565456454353115151344645453546577n;
-const num = 23;
-console.log(huge * BigInt(num));
+// const huge = 4864565456454353115151344645453546577n;
+// const num = 23;
+// console.log(huge * BigInt(num));
 
-// Exceptions
-console.log(20n > 15);
-console.log(20n === 20);
-console.log(typeof 20n);
-console.log(20n == '20');
+// // Exceptions
+// console.log(20n > 15);
+// console.log(20n === 20);
+// console.log(typeof 20n);
+// console.log(20n == '20');
 
-console.log(huge + ' is REALLY big!!!');
+// console.log(huge + ' is REALLY big!!!');
 
-// Divisions
-console.log(11n / 3n);
-console.log(10 / 3);
+// // Divisions
+// console.log(11n / 3n);
+// console.log(10 / 3);
+
+// Create a date
+// const now = new Date();
+// console.log(now);
+
+// console.log(new Date('Nov 16 2021 12:07:01'));
+// console.log(new Date('October 31, 1993'));
+// console.log(new Date(account1.movementsDates[0]));
+
+// console.log(new Date(2037, 10, 19, 15, 23, 5));
+// console.log(new Date(2037, 10, 31));
+
+// console.log(new Date(0));
+// console.log(new Date(3 * 24 * 60 * 60 * 1000));
+
+// Working with dates
+// const future = new Date(2037, 10, 19, 15, 23);
+// console.log(future);
+// console.log(future.getFullYear());
+// console.log(future.getMonth());
+// console.log(future.getDate());
+// console.log(future.getDay());
+// console.log(future.getHours());
+// console.log(future.getMinutes());
+// console.log(future.getSeconds());
+// console.log(future.toISOString());
+// console.log(future.getTime());
+
+// console.log(new Date(2142274980000));
+
+// console.log(Date.now());
+
+// future.setFullYear(2040);
+// console.log(future);
