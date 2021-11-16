@@ -377,3 +377,34 @@ btnSort.addEventListener('click', function (e) {
 // console.log(parseInt('230_000'));
 
 // Working with BigInt
+
+console.log(2 ** 53 - 1);
+console.log(Number.MAX_SAFE_INTEGER);
+console.log(2 ** 53 + 1);
+console.log(2 ** 53 + 2);
+console.log(2 ** 53 + 3);
+console.log(2 ** 53 + 4);
+
+console.log(4864565456454353115151344645453546577n);
+console.log(BigInt(48384302));
+
+// Operations
+console.log(10000n + 10000n);
+console.log(4864565456454353115151344645453546577n * 1000000n);
+// console.log(Math.sqrt(16n));
+
+const huge = 4864565456454353115151344645453546577n;
+const num = 23;
+console.log(huge * BigInt(num));
+
+// Exceptions
+console.log(20n > 15);
+console.log(20n === 20);
+console.log(typeof 20n);
+console.log(20n == '20');
+
+console.log(huge + ' is REALLY big!!!');
+
+// Divisions
+console.log(11n / 3n);
+console.log(10 / 3);
