@@ -605,4 +605,3 @@ btnSort.addEventListener('click', function (e) {
 //   const seconds = now.getSeconds();
 //   console.log(`${hour}:${min}:${seconds}`);
 // }, 1000);
-//
