@@ -83,3 +83,24 @@ message.style.height =
 document.documentElement.style.setProperty('--color-primary', 'orangered');
 
 document.body.style.setProperty('body', 'red');
+
+// Attributes
+const logo = document.querySelector('.nav__logo');
+
+console.log(logo.alt);
+console.log(logo.className);
+
+logo.alt = 'Beautiful minimalist logo';
+
+// Non-standard
+console.log(logo.designer);
+console.log(logo.getAttribute('designer'));
+logo.setAttribute('company', 'Bankist');
+
+console.log(logo.src);
+console.log(logo.getAttribute('src'));
+
+const link = document.querySelector('.nav__link--btn');
+
+console.log(link.href);
+console.log(link.getAttribute('href'));
