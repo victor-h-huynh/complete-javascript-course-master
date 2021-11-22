@@ -151,6 +151,35 @@ btnScrollTo.addEventListener('click', function (e) {
 
 // Types of Events and Event Handlers
 
-const h1 = document.querySelector('h1');
+// const h1 = document.querySelector('h1');
 
-h1.addEventListener('mouseenter', function (e) {});
+// const alertH1 = function (e) {
+//   alert('addEventListener: Great! You are reading the heading :D');
+// };
+
+// h1.addEventListener('mouseenter', alertH1);
+
+// setTimeout(() => h1.removeEventListener('mouseenter', alertH1), 3000);
+
+// h1.onmouseenter = function (e) {
+//   alert('addEventListener: Great! You are reading the heading :D');
+// };
+
+// rgb(255,255,255)
+const randomInt = (min, max) =>
+  Math.floor(Math.random() * (max - min + 1) + min);
+const randomColor = () =>
+  `rgb(${randomInt(0, 255)},${randomInt(0, 255)},${randomInt(0, 255)})`;
+console.log(randomColor(0, 255));
+
+document.querySelector('.nav__link').addEventListener('click', function (e) {
+  console.log('LINK');
+});
+
+document.querySelector('.nav__links').addEventListener('click', function (e) {
+  console.log('LINK');
+});
+
+document.querySelector('.nav').addEventListener('click', function (e) {
+  console.log('LINK');
+});
