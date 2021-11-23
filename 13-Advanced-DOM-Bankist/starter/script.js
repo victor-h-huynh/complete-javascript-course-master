@@ -80,7 +80,6 @@ btnScrollTo.addEventListener('click', function (e) {
 
 document.querySelector('.nav__links').addEventListener('click', function (e) {
   e.preventDefault();
-
   // Matching Strategy
   if (e.target.classList.contains('nav__link')) {
     const id = e.target.getAttribute('href');
@@ -225,3 +224,7 @@ document.querySelector('.nav__links').addEventListener('click', function (e) {
 // );
 
 // DOM Traversing
+const h1 = document.querySelector('h1');
+// Going downwards: chil
+console.log(h1.querySelectorAll('.highlight'));
+console.log(h1.childNodes);
