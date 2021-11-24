@@ -220,6 +220,8 @@ const imgObserver = new IntersectionObserver(loadImg, {
 
 imgTargets.forEach(img => imgObserver.observe(img));
 
+// Slider
+
 // Easier to understand
 // const handleHover = function (e, opacity) {
 //   if (e.target.classList.contains('nav__link')) {
