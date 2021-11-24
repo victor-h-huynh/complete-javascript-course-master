@@ -176,6 +176,8 @@ const headerObserver = new IntersectionObserver(stickyNav, {
 });
 headerObserver.observe(header);
 
+// Reveal sections
+
 // Easier to understand
 // const handleHover = function (e, opacity) {
 //   if (e.target.classList.contains('nav__link')) {
