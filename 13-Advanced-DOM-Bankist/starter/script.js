@@ -224,6 +224,7 @@ imgTargets.forEach(img => imgObserver.observe(img));
 const slides = document.querySelectorAll('.slide');
 const btnLeft = document.querySelector('.slider__btn--left');
 const btnRight = document.querySelector('.slider__btn--right');
+const dotContainer = document.querySelector('.dots');
 
 let curSlide = 0;
 const maxSlide = slides.length;
@@ -231,6 +232,15 @@ const maxSlide = slides.length;
 // const slider = document.querySelector('.slider');
 // slider.style.transform = 'scale(0.4) translateX(-800px)';
 // slider.style.overflow = 'visible';
+
+const createDots = function () {
+  slides.forEach(function (_, i) {
+    dotContainer.insertAdjacentHTML(
+      'beforeend',
+      `<button class="dots__dot" data-slide="0"></button>`
+    );
+  });
+};
 
 const goToSlide = function (slide) {
   slides.forEach(
@@ -260,7 +270,12 @@ const prevSlide = function () {
 
 btnRight.addEventListener('click', nextSlide);
 btnLeft.addEventListener('click', prevSlide);
-// curSlide = 1: -100%, 0%, 100%, 200%
+
+document.addEventListener('keydown', function (e) {
+  console.log(e);
+  if (e.key === 'ArrowLeft') prevSlide();
+  e.key === 'ArrowRight' && nextSlide();
+});
 
 // Easier to understand
 // const handleHover = function (e, opacity) {
