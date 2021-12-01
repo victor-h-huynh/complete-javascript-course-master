@@ -87,3 +87,4 @@ DATA CAR 2: 'Mercedes' going at 95 km/h
 
 GOOD LUCK 😀
 */
+const Car = function ()
