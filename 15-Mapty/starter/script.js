@@ -58,9 +58,9 @@ class Cycling extends Workout {
   }
 }
 
-const run1 = new Running([39, -12], 5.2, 24, 178);
-const cycling1 = new Cycling([39, -12], 27, 95, 523);
-console.log(run1, cycling1);
+// const run1 = new Running([39, -12], 5.2, 24, 178);
+// const cycling1 = new Cycling([39, -12], 27, 95, 523);
+// console.log(run1, cycling1);
 
 ///////////////////////////////////////////////
 // APPLICATION ARCHITECTURE
@@ -71,6 +71,7 @@ const inputDistance = document.querySelector('.form__input--distance');
 const inputDuration = document.querySelector('.form__input--duration');
 const inputCadence = document.querySelector('.form__input--cadence');
 const inputElevation = document.querySelector('.form__input--elevation');
+const editBtn = document.querySelector('.form__btn');
 
 class App {
   #map;
@@ -89,6 +90,7 @@ class App {
     form.addEventListener('submit', this._newWorkout.bind(this));
     inputType.addEventListener('change', this._toggleElevationField);
     containerWorkouts.addEventListener('click', this._moveToPopup.bind(this));
+    editBtn.addEventListener('click', this._editForm);
   }
 
   _getPosition() {
@@ -109,7 +111,6 @@ class App {
 
     const coords = [latitude, longitude];
 
-    console.log(this);
     this.#map = L.map('map').setView(coords, this.#mapZoomLevel);
     //   console.log(map);
 
@@ -142,6 +143,11 @@ class App {
     form.style.display = 'none';
     form.classList.add('hidden');
     setTimeout(() => (form.style.display = 'grid'), 1000);
+  }
+
+  _editForm(e) {
+    console.log('editForm', e.target, e.current);
+    return alert('WTF');
   }
 
   _toggleElevationField() {
@@ -190,7 +196,6 @@ class App {
 
     // Add new object to workout array
     this.#workouts.push(workout);
-    console.log(workout);
 
     // Render workout on map as marker
     this._renderWorkoutMarker(workout);
@@ -253,6 +258,7 @@ class App {
         <span class="workout__value">${workout.cadence}</span>
         <span class="workout__unit">spm</span>
       </div>
+      <button class="form__btn">Edit</button>
     </li>
     `;
 
@@ -268,6 +274,7 @@ class App {
         <span class="workout__value">${workout.elevationGain}</span>
         <span class="workout__unit">m</span>
       </div>
+      <button class="form__btn">Edit</button>
     </li>
     `;
 
@@ -282,7 +289,6 @@ class App {
     const workout = this.#workouts.find(
       work => work.id === workoutEl.dataset.id
     );
-    console.log(workout);
 
     this.#map.setView(workout.coords, this.#mapZoomLevel, {
       animate: true,
@@ -292,7 +298,7 @@ class App {
     });
 
     // using the public interface
-    workout.click();
+    // workout.click();
   }
 
   _setLocalStorage() {
@@ -301,7 +307,6 @@ class App {
 
   _getLocalStorage() {
     const data = JSON.parse(localStorage.getItem('workouts'));
-    console.log(data);
 
     if (!data) return;
 
@@ -311,6 +316,19 @@ class App {
       this._renderWorkout(work);
     });
   }
+
+  reset() {
+    localStorage.removeItem('workouts');
+    location.reload();
+  }
 }
 
 const app = new App();
+
+// Parent of my item to handle the children event
+// Each children made doesn't have an event listener
+// Child is pressed -> Bubble up to event to parent -> Parent will check if it's edit -> Then have a way to know what data is there
+// From edit button find the ID. Then manipulate the data/access the state. Delete the item. Edit text
+
+// Attach listener to parent. That listener will handle every click inside. Findout how to handle only the edit button stuff.
+// seteventlistener to the delete button then be able to diffierate between delete button versus anywhere in the click
