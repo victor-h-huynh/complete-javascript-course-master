@@ -71,7 +71,6 @@ const inputDistance = document.querySelector('.form__input--distance');
 const inputDuration = document.querySelector('.form__input--duration');
 const inputCadence = document.querySelector('.form__input--cadence');
 const inputElevation = document.querySelector('.form__input--elevation');
-const editBtn = document.querySelector('.form__btn');
 
 class App {
   #map;
@@ -90,7 +89,6 @@ class App {
     form.addEventListener('submit', this._newWorkout.bind(this));
     inputType.addEventListener('change', this._toggleElevationField);
     containerWorkouts.addEventListener('click', this._moveToPopup.bind(this));
-    editBtn.addEventListener('click', this._editForm);
   }
 
   _getPosition() {
@@ -143,11 +141,6 @@ class App {
     form.style.display = 'none';
     form.classList.add('hidden');
     setTimeout(() => (form.style.display = 'grid'), 1000);
-  }
-
-  _editForm(e) {
-    console.log('editForm', e.target, e.current);
-    return alert('WTF');
   }
 
   _toggleElevationField() {
@@ -211,6 +204,7 @@ class App {
   }
 
   _renderWorkoutMarker(workout) {
+    console.log(workout);
     L.marker(workout.coords)
       .addTo(this.#map)
       .bindPopup(
@@ -258,7 +252,8 @@ class App {
         <span class="workout__value">${workout.cadence}</span>
         <span class="workout__unit">spm</span>
       </div>
-      <button class="form__btn">Edit</button>
+      <button class="form__btn--edit">Edit</button>
+      <button class="form__btn--delete">Delete</button>
     </li>
     `;
 
@@ -274,15 +269,43 @@ class App {
         <span class="workout__value">${workout.elevationGain}</span>
         <span class="workout__unit">m</span>
       </div>
-      <button class="form__btn">Edit</button>
+      <button class="form__btn--edit">Edit</button>
+      <button class="form__btn--delete">Delete</button>
     </li>
     `;
 
     form.insertAdjacentHTML('afterend', html);
+
+    const deleteBtn = document.querySelector('.form__btn--delete');
+    const workoutElApp = this.#workouts;
+
+    deleteBtn.addEventListener('click', function (e) {
+      const workoutEl = e.target.closest('.workout');
+      if (!workoutEl) return;
+
+      // console.log('workoutEl', workoutEl);
+      // console.log('workoutElApp', workoutElApp);
+
+      // console.log('workoutEl.dataset.id', workoutEl.dataset.id);
+
+      const found = workoutElApp.find(
+        element => element.id === workoutEl.dataset.id
+      );
+      // console.log('found', found);
+      // console.log(workoutElApp.indexOf(found));
+      if (found) {
+        workoutElApp.splice(workoutElApp.indexOf(found), 1);
+        document.querySelector(`[data-id='${workout.id}']`).remove();
+
+        // console.log(workoutElApp.indexOf(found));
+        // console.log(workoutElApp);
+      }
+    });
   }
   _moveToPopup(e) {
     const workoutEl = e.target.closest('.workout');
-    console.log(workoutEl);
+    // UNCOMMENT AFTER
+    // console.log(workoutEl);
 
     if (!workoutEl) return;
 
@@ -290,12 +313,14 @@ class App {
       work => work.id === workoutEl.dataset.id
     );
 
-    this.#map.setView(workout.coords, this.#mapZoomLevel, {
-      animate: true,
-      pan: {
-        duration: 1,
-      },
-    });
+    if (workout) {
+      this.#map.setView(workout.coords, this.#mapZoomLevel, {
+        animate: true,
+        pan: {
+          duration: 1,
+        },
+      });
+    }
 
     // using the public interface
     // workout.click();
