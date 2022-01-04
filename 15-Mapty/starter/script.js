@@ -295,7 +295,7 @@ class App {
       if (found) {
         workoutElApp.splice(workoutElApp.indexOf(found), 1);
         document.querySelector(`[data-id='${workout.id}']`).remove();
-        console.log(workout.coords);
+
         // console.log(workoutElApp.indexOf(found));
         // console.log(workoutElApp);
       }
