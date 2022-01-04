@@ -294,9 +294,10 @@ class App {
       // console.log('found', found);
       // console.log(workoutElApp.indexOf(found));
       if (found) {
+        const layer = L.marker(workout.coords);
         workoutElApp.splice(workoutElApp.indexOf(found), 1);
         document.querySelector(`[data-id='${workout.id}']`).remove();
-
+        layer.removeLayer();
         // console.log(workoutElApp.indexOf(found));
         // console.log(workoutElApp);
       }
