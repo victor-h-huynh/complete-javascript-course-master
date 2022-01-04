@@ -2,6 +2,7 @@
 
 class Workout {
   date = new Date();
+  ref = null;
   id = (Date.now() + '').slice(-10);
   clicks = 0;
 
@@ -71,6 +72,7 @@ const inputDistance = document.querySelector('.form__input--distance');
 const inputDuration = document.querySelector('.form__input--duration');
 const inputCadence = document.querySelector('.form__input--cadence');
 const inputElevation = document.querySelector('.form__input--elevation');
+const deleteBtn = document.querySelector('.form__btn--delete');
 
 class App {
   #map;
@@ -121,7 +123,8 @@ class App {
     this.#map.on('click', this._showForm.bind(this));
 
     this.#workouts.forEach(work => {
-      this._renderWorkoutMarker(work);
+      const layer = this._renderWorkoutMarker(work);
+      work.ref = layer;
     });
   }
 
@@ -187,11 +190,11 @@ class App {
       workout = new Cycling([lat, lng], distance, duration, elevation);
     }
 
+    // Render workout on map as marker
+    const layer = this._renderWorkoutMarker(workout);
+    workout.ref = layer;
     // Add new object to workout array
     this.#workouts.push(workout);
-
-    // Render workout on map as marker
-    this._renderWorkoutMarker(workout);
 
     // Render workout on list
     this._renderWorkout(workout);
@@ -204,8 +207,8 @@ class App {
   }
 
   _renderWorkoutMarker(workout) {
-    L.marker(workout.coords)
-      .addTo(this.#map)
+    const layer = L.marker(workout.coords).addTo(this.#map);
+    layer
       .bindPopup(
         L.popup({
           maxWidth: 250,
@@ -219,6 +222,7 @@ class App {
         `${workout.type === 'running' ? '🏃‍♂️' : '🚴'} ${workout.description}`
       )
       .openPopup();
+    return layer;
   }
 
   _renderWorkout(workout) {
@@ -278,27 +282,8 @@ class App {
     const deleteBtn = document.querySelector('.form__btn--delete');
     const workoutElApp = this.#workouts;
 
-    deleteBtn.addEventListener('click', function (e) {
-      const workoutEl = e.target.closest('.workout');
-      if (!workoutEl) return;
-
-      // console.log('workoutEl', workoutEl);
-      // console.log('workoutElApp', workoutElApp);
-
-      // console.log('workoutEl.dataset.id', workoutEl.dataset.id);
-
-      const found = workoutElApp.find(
-        element => element.id === workoutEl.dataset.id
-      );
-      // console.log('found', found);
-      // console.log(workoutElApp.indexOf(found));
-      if (found) {
-        workoutElApp.splice(workoutElApp.indexOf(found), 1);
-        document.querySelector(`[data-id='${workout.id}']`).remove();
-
-        // console.log(workoutElApp.indexOf(found));
-        // console.log(workoutElApp);
-      }
+    deleteBtn.addEventListener('click', e => {
+      this._deleteWorkout(workout, e);
     });
   }
   _moveToPopup(e) {
@@ -326,7 +311,12 @@ class App {
   }
 
   _setLocalStorage() {
-    localStorage.setItem('workouts', JSON.stringify(this.#workouts));
+    const saved = this.#workouts.map(workout => {
+      const object = Object.assign({}, workout);
+      object.ref = null;
+      return object;
+    });
+    localStorage.setItem('workouts', JSON.stringify(saved));
   }
 
   _getLocalStorage() {
@@ -339,6 +329,23 @@ class App {
     this.#workouts.forEach(work => {
       this._renderWorkout(work);
     });
+  }
+
+  _deleteWorkout(workout, e) {
+    const workoutElApp = this.#workouts;
+
+    const workoutEl = e.target.closest('.workout');
+    if (!workoutEl) return;
+
+    const found = workoutElApp.find(
+      element => element.id === workoutEl.dataset.id
+    );
+
+    if (found) {
+      workoutElApp.splice(workoutElApp.indexOf(found), 1);
+      document.querySelector(`[data-id='${workout.id}']`).remove();
+      workout.ref.remove();
+    }
   }
 
   reset() {
