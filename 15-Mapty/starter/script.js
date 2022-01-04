@@ -204,7 +204,6 @@ class App {
   }
 
   _renderWorkoutMarker(workout) {
-    console.log(workout);
     L.marker(workout.coords)
       .addTo(this.#map)
       .bindPopup(
@@ -294,10 +293,9 @@ class App {
       // console.log('found', found);
       // console.log(workoutElApp.indexOf(found));
       if (found) {
-        const layer = L.marker(workout.coords);
         workoutElApp.splice(workoutElApp.indexOf(found), 1);
         document.querySelector(`[data-id='${workout.id}']`).remove();
-        layer.removeLayer();
+        console.log(workout.coords);
         // console.log(workoutElApp.indexOf(found));
         // console.log(workoutElApp);
       }
