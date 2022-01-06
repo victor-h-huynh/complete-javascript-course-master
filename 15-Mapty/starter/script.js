@@ -351,6 +351,7 @@ class App {
   sortWorkouts() {
     const workoutElApp = this.#workouts;
     const oldwWorkoutList = document.querySelectorAll('.workout');
+
     oldwWorkoutList.forEach(e => e.remove());
     workoutElApp.sort((a, b) => a.distance - b.distance);
     workoutElApp.forEach(work => {
