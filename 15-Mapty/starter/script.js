@@ -2,7 +2,6 @@
 
 class Workout {
   date = new Date();
-  ref = null;
   id = (Date.now() + '').slice(-10);
   clicks = 0;
 
@@ -73,6 +72,8 @@ const inputDuration = document.querySelector('.form__input--duration');
 const inputCadence = document.querySelector('.form__input--cadence');
 const inputElevation = document.querySelector('.form__input--elevation');
 const deleteBtn = document.querySelector('.form__btn--delete');
+const resetBtn = document.querySelector('.btn__reset');
+const sortBtn = document.querySelector('.btn__sort');
 
 class App {
   #map;
@@ -91,6 +92,8 @@ class App {
     form.addEventListener('submit', this._newWorkout.bind(this));
     inputType.addEventListener('change', this._toggleElevationField);
     containerWorkouts.addEventListener('click', this._moveToPopup.bind(this));
+    resetBtn.addEventListener('click', this.reset);
+    sortBtn.addEventListener('click', this.sortWorkouts.bind(this));
   }
 
   _getPosition() {
@@ -146,7 +149,7 @@ class App {
     setTimeout(() => (form.style.display = 'grid'), 1000);
   }
 
-  _toggleElevationField() {
+  _toggleElevationField(e) {
     inputElevation.closest('.form__row').classList.toggle('form__row--hidden');
     inputCadence.closest('.form__row').classList.toggle('form__row--hidden');
   }
@@ -255,7 +258,6 @@ class App {
         <span class="workout__value">${workout.cadence}</span>
         <span class="workout__unit">spm</span>
       </div>
-      <button class="form__btn--edit">Edit</button>
       <button class="form__btn--delete">Delete</button>
     </li>
     `;
@@ -272,7 +274,6 @@ class App {
         <span class="workout__value">${workout.elevationGain}</span>
         <span class="workout__unit">m</span>
       </div>
-      <button class="form__btn--edit">Edit</button>
       <button class="form__btn--delete">Delete</button>
     </li>
     `;
@@ -280,7 +281,6 @@ class App {
     form.insertAdjacentHTML('afterend', html);
 
     const deleteBtn = document.querySelector('.form__btn--delete');
-    const workoutElApp = this.#workouts;
 
     deleteBtn.addEventListener('click', e => {
       this._deleteWorkout(workout, e);
@@ -346,6 +346,16 @@ class App {
       document.querySelector(`[data-id='${workout.id}']`).remove();
       workout.ref.remove();
     }
+  }
+
+  sortWorkouts() {
+    const workoutElApp = this.#workouts;
+    const oldwWorkoutList = document.querySelectorAll('.workout');
+    oldwWorkoutList.forEach(e => e.remove());
+    workoutElApp.sort((a, b) => a.distance - b.distance);
+    workoutElApp.forEach(work => {
+      this._renderWorkout(work);
+    });
   }
 
   reset() {
