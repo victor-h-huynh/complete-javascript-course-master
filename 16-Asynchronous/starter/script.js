@@ -76,3 +76,7 @@ const countriesContainer = document.querySelector('.countries');
 //     }, 1000);
 //   }, 1000);
 // }, 1000);
+
+// const request = new XMLHttpRequest();
+// request.open('GET', `https://restcountries.com/v3.1/name/${country}`);
+// request.send();
