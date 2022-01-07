@@ -24,12 +24,12 @@ const renderCountry = function (data, className = '') {
 </article>
 `;
   countriesContainer.insertAdjacentHTML('beforeend', html);
-  countriesContainer.style.opacity = 1;
+  //   countriesContainer.style.opacity = 1;
 };
 
 const renderError = function (msg) {
   countriesContainer.insertAdjacentText('beforeend', msg);
-  countriesContainer.style.opacity = 1;
+  //   countriesContainer.style.opacity = 1;
 };
 // const getCountryDataAndNeighbour = function (country) {
 //   // AJAX call country 1
@@ -108,9 +108,14 @@ const getCountryData = function (country) {
     .catch(err => {
       console.error(`${err} T-T`);
       renderError(`Something went wrong T-T ${err.message}. Try again!`);
+    })
+    .finally(() => {
+      countriesContainer.style.opacity = 1;
     });
 };
 
 btn.addEventListener('click', function () {
   getCountryData('vietnam');
 });
+
+getCountryData('asdgs');
