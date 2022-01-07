@@ -9,10 +9,6 @@ const countriesContainer = document.querySelector('.countries');
 // Our First AJAX Call: XMLHttpRequest
 
 const renderCountry = function (data, className = '') {
-  //   const languages = Object.values(data.languages);
-  //   const currencies = Object.values(data.currencies);
-  console.log(data.name);
-
   const html = `
 <article class="country ${className}">
     <img class="country__img" src="${data.flags.png}" />
@@ -107,4 +103,3 @@ const getCountryData = function (country) {
 };
 
 getCountryData('vietnam');
-//
