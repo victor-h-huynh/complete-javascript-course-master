@@ -92,13 +92,13 @@ const renderCountry = function (data, className = '') {
 //     });
 // };
 
-const getJSON = function (url, errorMsg = 'Something went wrong') {
-  return fetch(url).then(response => {
-    if (!response.ok) throw new Error(`${errorMsg} ${response.status}`);
+// const getJSON = function (url, errorMsg = 'Something went wrong') {
+//   return fetch(url).then(response => {
+//     if (!response.ok) throw new Error(`${errorMsg} ${response.status}`);
 
-    return response.json();
-  });
-};
+//     return response.json();
+//   });
+// };
 
 const getCountryData = function (country) {
   // Country 1
@@ -170,10 +170,13 @@ const whereAmI = function (lat, lng, errorMsg = 'Something went wrong') {
     .then(response => response.json())
     .then(data => {
       console.log(`You are in ${data.city}, ${data.country}`);
+      getCountryData(data.country);
     })
     .catch(err => {
       console.log(`${err}, ${err.message}. Try again!`);
     });
 };
 
-whereAmI(52.508, 13.381);
+// whereAmI(52.508, 13.381);
+// whereAmI(19.037, 72.873));
+// whereAmI(-33.933, 18.474));
