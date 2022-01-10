@@ -129,7 +129,7 @@ const getCountryData = function (country) {
 };
 
 btn.addEventListener('click', function () {
-  getCountryData('vietnam');
+  getCountryData('usa');
 });
 
 // getCountryData('australia');
@@ -163,20 +163,26 @@ GOOD LUCK 😀
 
 // https://geocode.xyz/51.50354,-0.12768?geoit=json
 
-const whereAmI = function (lat, lng, errorMsg = 'Something went wrong') {
-  fetch(
-    `https://geocode.xyz/${lat},${lng}?geoit=json&auth===552876865308724560467x100599`
-  )
-    .then(response => response.json())
-    .then(data => {
-      console.log(`You are in ${data.city}, ${data.country}`);
-      getCountryData(data.country);
-    })
-    .catch(err => {
-      console.log(`${err}, ${err.message}. Try again!`);
-    });
-};
+// const whereAmI = function (lat, lng, errorMsg = 'Something went wrong') {
+//   fetch(
+//     `https://geocode.xyz/${lat},${lng}?geoit=json&auth===552876865308724560467x100599`
+//   )
+//     .then(response => {
+//       console.log(response);
+//       if (!response.ok) throw new Error(`Problem with geocoding ${res.status}`);
+
+//       return response.json();
+//     })
+//     .then(data => {
+//       getCountryData(data.country);
+//     })
+//     .catch(err => {
+//       console.error(`${err.message}. COMING FROM CATCH!`);
+//     });
+// };
 
 // whereAmI(52.508, 13.381);
-// whereAmI(19.037, 72.873));
-// whereAmI(-33.933, 18.474));
+// whereAmI(19.037, 72.873);
+// whereAmI(-33.933, 18.474);
+
+console.log('Test start');
