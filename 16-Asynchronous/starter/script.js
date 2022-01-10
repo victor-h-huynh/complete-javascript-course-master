@@ -185,12 +185,22 @@ GOOD LUCK 😀
 // whereAmI(19.037, 72.873);
 // whereAmI(-33.933, 18.474);
 
-console.log('Test start');
-setTimeout(() => console.log('0 sec timer'), 0);
-Promise.resolve('Resolved promise 1').then(res => console.log(res));
+// console.log('Test start');
+// setTimeout(() => console.log('0 sec timer'), 0);
+// Promise.resolve('Resolved promise 1').then(res => console.log(res));
 
-Promise.resolve('Resolved promise 2').then(res => {
-  for (let i = 0; i < 1000000; i++) {}
-  console.log(res);
+// Promise.resolve('Resolved promise 2').then(res => {
+//   for (let i = 0; i < 1000000; i++) {}
+//   console.log(res);
+// });
+// console.log('Test end');
+
+const lotteryPromise = new Promise(function (resolve, reject) {
+  if (Math.random() >= 0.5) {
+    resolve('You WIN!');
+  } else {
+    reject('You lost your money');
+  }
 });
-console.log('Test end');
+
+lotteryPromise.then(res => console.log(res)).catch(err => console.error(err));
