@@ -360,3 +360,6 @@ GOOD LUCK 😀
 // let img = document.createElement('img');
 // img.src = 'img/img-1.jpg';
 // document.body.appendChild(img);
+
+///////////////////////////////////////////////
+// Consuming Promises with Async/Await
