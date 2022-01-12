@@ -589,20 +589,76 @@ let currentImg;
 //   })
 //   .catch(err => console.error(`ERROR IN THE CATCH ${err}`));
 
-const loanNPause = async function () {
-  try {
-    currentImg = await createImage('img/img-1.jpg');
-    console.log('Image 1 loaded');
-    await wait(2);
-    currentImg.style.display = 'none';
+// First attempt
+// const loadNPause = async function () {
+//   try {
+//     currentImg = await createImage('img/img-1.jpg');
+//     console.log('Image 1 loaded');
+//     await wait(2);
+//     currentImg.style.display = 'none';
 
-    currentImg = await createImage('img/img-2.jpg');
-    console.log('Image 2 loaded');
-    await wait(2);
-    currentImg.style.display = 'none';
-  } catch (err) {}
-};
-loanNPause();
+//     currentImg = await createImage('img/img-2.jpg');
+//     console.log('Image 2 loaded');
+//     await wait(2);
+//     currentImg.style.display = 'none';
+//   } catch (err) {
+//     console.error(`ERROR IN THE loanNPause CATCH ${err}`);
+//   }
+// };
+// loadNPause();
+
+// Answer
+// const loadNPause = async function () {
+//   try {
+//     // Load image1
+//     let img = await createImage('img/img-1.jpg');
+//     console.log('Image 1 loaded');
+//     await wait(2);
+//     img.style.display = 'none';
+
+//     // Load image2
+//     img = await createImage('img/img-2.jpg');
+//     console.log('Image 2 loaded');
+//     await wait(2);
+//     img.style.display = 'none';
+//   } catch (err) {
+//     console.log(err);
+//   }
+// };
+// loadNPause();
+
+// First attempt
+
+// const loadAll = async function (imgArr) {
+//   try {
+//     const imgs = imgArr.map(img => {
+//       return createImage(img);
+//     });
+//     const result = Promise.all(imgs).then(res =>
+//       res.forEach(img => img.classList.add('parallel'))
+//     );
+//   } catch (err) {
+//     console.error(`ERROR IN THE loadAll CATCH ${err}`);
+//   }
+// };
+
+// loadAll(['img/img-1.jpg', 'img/img-2.jpg', 'img/img-3.jpg']);
+
+// Answer
+
+// const loadAll = async function (imgArr) {
+//   try {
+//     const imgs = imgArr.map(async img => await createImage(img));
+
+//     const imgsEl = await Promise.all(imgs);
+//     console.log(imgsEl);
+//     imgsEl.forEach(img => img.classList.add('parallel'));
+//   } catch (err) {
+//     console.error(err);
+//   }
+// };
+
+// loadAll(['img/img-1.jpg', 'img/img-2.jpg', 'img/img-3.jpg']);
 
 // const get3Countries = async function (c1, c2, c3) {
 //   try {
