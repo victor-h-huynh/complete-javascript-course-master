@@ -9,7 +9,6 @@ const countriesContainer = document.querySelector('.countries');
 // Our First AJAX Call: XMLHttpRequest
 
 const renderCountry = function (data, className = '') {
-  console.log(data);
   const html = `
   <article class="country ${className}">
       <img class="country__img" src="${data.flags.png}" />
@@ -93,13 +92,13 @@ const renderError = function (msg) {
 //     });
 // };
 
-// const getJSON = function (url, errorMsg = 'Something went wrong') {
-//   return fetch(url).then(response => {
-//     if (!response.ok) throw new Error(`${errorMsg} ${response.status}`);
+const getJSON = function (url, errorMsg = 'Something went wrong') {
+  return fetch(url).then(response => {
+    if (!response.ok) throw new Error(`${errorMsg} ${response.status}`);
 
-//     return response.json();
-//   });
-// };
+    return response.json();
+  });
+};
 
 // const getCountryData = function (country) {
 //   // Country 1
@@ -368,48 +367,83 @@ GOOD LUCK 😀
 // fetch(`https://restcountries.com/v3.1/name/${country}`)
 // .then(res => console.log(res))
 
-const getPosition = function () {
-  return new Promise(function (resolve, reject) {
-    navigator.geolocation.getCurrentPosition(resolve, reject);
-  });
-};
+// const getPosition = function () {
+//   return new Promise(function (resolve, reject) {
+//     navigator.geolocation.getCurrentPosition(resolve, reject);
+//   });
+// };
 
-const whereAmI = async function () {
-  try {
-    // Geolocation
-    const pos = await getPosition();
-    const { latitude: lat, longitude: lng } = pos.coords;
+// const whereAmI = async function () {
+//   try {
+//     // Geolocation
+//     const pos = await getPosition();
+//     const { latitude: lat, longitude: lng } = pos.coords;
+//     // Reverse geocoding
+//     const resGeo = await fetch(
+//       `https://geocode.xyz/${lat},${lng}?geoit=json&auth===227171725944337946082x24478`
+//     );
+//     if (!resGeo.ok) throw new Error('Problem getting location data');
+//     const dataGeo = await resGeo.json();
 
-    // Reverse geocoding
-    const resGeo = await fetch(
-      `https://geocode.xyz/${lat},${lng}?geoit=json&auth===227171725944337946082x24478`
-    );
-    if (!resGeo.ok) throw new Error('Problem getting location data');
+//     // Country data
+//     const res = await fetch(
+//       `https://restcountries.com/v3.1/name/${dataGeo.country}`
+//     );
+//     if (!resGeo) throw new Error('Problem getting country data');
 
-    const dataGeo = await resGeo.json();
+//     const data = await res.json();
+//     renderCountry(data[0]);
 
-    // Country data
-    const res = await fetch(
-      `https://restcountries.com/v3.1/name/${dataGeo.country}`
-    );
-    if (!resGeo) throw new Error('Problem getting country data');
+//     return `You are in ${dataGeo.city}, ${dataGeo.country}`;
+//   } catch (err) {
+//     console.error(`${err} T-T`);
+//     renderError(`T-T ${err.message}`);
 
-    const data = await res.json();
-    console.log(data);
-    renderCountry(data[0]);
-  } catch (err) {
-    console.error(`${err} T-T`);
-    renderError(`T-T ${err.message}`);
-  }
-};
-whereAmI();
+//     // Reject promise returned from async function
+//     throw err;
+//   }
+// };
 
-console.log('FIRST');
+// console.log('1: Will get location');
+// const city = whereAmI();
+// console.log(city);
 
-// try {
-//   let y = 1;
-//   const x = 2;
-//   x = 3;
-// } catch (err) {
-//   alert(err.message);
-// }
+// whereAmI()
+//   .then(city => console.log(`2: ${city}`))
+//   .catch(err => console.error(`2: ${err.essage}`))
+//   .finally(() => console.log('3: Finished getting location'));
+
+// (async function () {
+//   try {
+//     const city = await whereAmI();
+//     console.log(`2: ${city}`);
+//   } catch (err) {
+//     err => console.error(`2: ${err.message}`);
+//   }
+//   console.log('3: Finished getting location');
+// })();
+
+///////////////////////////////////////////////
+// Running Promises in Parallel
+
+// const get3Countries = async function (c1, c2, c3) {
+//   try {
+//     // const [data1] = await getJSON(`https://restcountries.com/v3.1/name/${c1}`);
+//     // const [data2] = await getJSON(`https://restcountries.com/v3.1/name/${c2}`);
+//     // const [data3] = await getJSON(`https://restcountries.com/v3.1/name/${c3}`);
+
+//     const data = await Promise.all([
+//       getJSON(`https://restcountries.com/v3.1/name/${c1}`),
+//       getJSON(`https://restcountries.com/v3.1/name/${c2}`),
+//       getJSON(`https://restcountries.com/v3.1/name/${c3}`),
+//     ]);
+
+//     console.log(data.map(d => d[0].capital));
+//   } catch (err) {
+//     console.error(err);
+//   }
+// };
+// get3Countries('vietnam', 'canada', 'usa');
+
+///////////////////////////////////////////////
+// Promise.race
