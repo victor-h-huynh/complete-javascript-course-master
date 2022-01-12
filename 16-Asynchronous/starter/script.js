@@ -367,45 +367,71 @@ GOOD LUCK 😀
 // fetch(`https://restcountries.com/v3.1/name/${country}`)
 // .then(res => console.log(res))
 
-// const getPosition = function () {
-//   return new Promise(function (resolve, reject) {
-//     navigator.geolocation.getCurrentPosition(resolve, reject);
+const getPosition = function () {
+  return new Promise(function (resolve, reject) {
+    navigator.geolocation.getCurrentPosition(resolve, reject);
+  });
+};
+
+const whereAmI = async function () {
+  try {
+    // Geolocation
+    const pos = await getPosition();
+    const { latitude: lat, longitude: lng } = pos.coords;
+    // Reverse geocoding
+    const resGeo = await fetch(
+      `https://geocode.xyz/${lat},${lng}?geoit=json&auth===227171725944337946082x24478`
+    );
+
+    if (!resGeo.ok) throw new Error('Problem getting location data');
+    const dataGeo = await resGeo.json();
+
+    // Country data
+    const res = await fetch(
+      `https://restcountries.com/v3.1/name/${dataGeo.country}`
+    );
+    if (!resGeo) throw new Error('Problem getting country data');
+
+    const data = await res.json();
+    renderCountry(data[0]);
+
+    return `You are in ${dataGeo.city}, ${dataGeo.country}`;
+  } catch (err) {
+    console.error(`${err} T-T`);
+    renderError(`T-T ${err.message}`);
+
+    // Reject promise returned from async function
+    throw err;
+  }
+};
+
+// const whereAmI = function () {
+//   return new Promise((resolve, reject) => {
+//     getPosition()
+//       .then(pos => {
+//         const { latitude: lat, longitude: lng } = pos.coords;
+//         return fetch(
+//           `https://geocode.xyz/${lat},${lng}?geoit=json&auth===227171725944337946082x24478`
+//         );
+//       })
+//       .then(resGeo => {
+//         return resGeo.json();
+//       })
+//       .then(dataGeo => {
+//         return fetch(`https://restcountries.com/v3.1/name/${dataGeo.country}`);
+//       })
+//       .then(res => {
+//         return res.json();
+//       })
+//       .then(data => {
+//         renderCountry(data[0]);
+//       })
+//       .catch(err => err);
 //   });
 // };
 
-// const whereAmI = async function () {
-//   try {
-//     // Geolocation
-//     const pos = await getPosition();
-//     const { latitude: lat, longitude: lng } = pos.coords;
-//     // Reverse geocoding
-//     const resGeo = await fetch(
-//       `https://geocode.xyz/${lat},${lng}?geoit=json&auth===227171725944337946082x24478`
-//     );
-//     if (!resGeo.ok) throw new Error('Problem getting location data');
-//     const dataGeo = await resGeo.json();
-
-//     // Country data
-//     const res = await fetch(
-//       `https://restcountries.com/v3.1/name/${dataGeo.country}`
-//     );
-//     if (!resGeo) throw new Error('Problem getting country data');
-
-//     const data = await res.json();
-//     renderCountry(data[0]);
-
-//     return `You are in ${dataGeo.city}, ${dataGeo.country}`;
-//   } catch (err) {
-//     console.error(`${err} T-T`);
-//     renderError(`T-T ${err.message}`);
-
-//     // Reject promise returned from async function
-//     throw err;
-//   }
-// };
-
 // console.log('1: Will get location');
-// const city = whereAmI();
+const city = whereAmI();
 // console.log(city);
 
 // whereAmI()
@@ -472,3 +498,44 @@ Promise.race([
 ])
   .then(res => console.log(res[0]))
   .catch(err => console.error(err));
+
+// Promise.allSettled
+Promise.allSettled([
+  Promise.resolve('Success'),
+  Promise.reject('ERROR'),
+  Promise.resolve('Another success'),
+]).then(res => console.log(res));
+
+Promise.all([
+  Promise.resolve('Success'),
+  Promise.reject('ERROR'),
+  Promise.resolve('Another success'),
+])
+  .then(res => console.log(res))
+  .catch(err => console.error(err));
+
+// Promise.any [ES2021]
+Promise.any([
+  Promise.resolve('Success'),
+  Promise.reject('ERROR'),
+  Promise.resolve('Another success'),
+])
+  .then(res => console.log(res))
+  .catch(err => console.error(err));
+
+/* 
+PART 1
+Write an async function 'loadNPause' that recreates Coding Challenge #2, this time using async/await (only the part where the promise is consumed). Compare the two versions, think about the big differences, and see which one you like more.
+Don't forget to test the error handler, and to set the network speed to 'Fast 3G' in the dev tools Network tab.
+
+PART 2
+1. Create an async function 'loadAll' that receives an array of image paths 'imgArr';
+2. Use .map to loop over the array, to load all the images with the 'createImage' function (call the resulting array 'imgs')
+3. Check out the 'imgs' array in the console! Is it like you expected?
+4. Use a promise combinator function to actually get the images from the array 😉
+5. Add the 'paralell' class to all the images (it has some CSS styles).
+
+TEST DATA: ['img/img-1.jpg', 'img/img-2.jpg', 'img/img-3.jpg']. To test, turn off the 'loadNPause' function.
+
+GOOD LUCK 😀
+*/
