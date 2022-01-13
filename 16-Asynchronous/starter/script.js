@@ -628,15 +628,13 @@ let currentImg;
 // loadNPause();
 
 // First attempt
-
 // const loadAll = async function (imgArr) {
 //   try {
 //     const imgs = imgArr.map(img => {
 //       return createImage(img);
 //     });
-//     const result = Promise.all(imgs).then(res =>
-//       res.forEach(img => img.classList.add('parallel'))
-//     );
+//     const result = await Promise.all(imgs);
+//     console.log(result);
 //   } catch (err) {
 //     console.error(`ERROR IN THE loadAll CATCH ${err}`);
 //   }
@@ -645,7 +643,6 @@ let currentImg;
 // loadAll(['img/img-1.jpg', 'img/img-2.jpg', 'img/img-3.jpg']);
 
 // Answer
-
 // const loadAll = async function (imgArr) {
 //   try {
 //     const imgs = imgArr.map(async img => await createImage(img));
