@@ -1,0 +1,19 @@
+{
+  "name": "forkify",
+  "version": "1.0.0",
+  "description": "Recipe application",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "author": "Victor Huynh",
+  "license": "ISC",
+  "dependencies": {
+    "core-js": "^3.20.3",
+    "parcel": "^2.2.1",
+    "regenerator-runtime": "^0.13.9"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.2.1"
+  }
+}
