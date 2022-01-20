@@ -21,7 +21,7 @@
 132C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\node_modules\source-map\lib\array-set.js131411568470000000 0
 138C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\node_modules\core-js\features\reflect\index.js121436361000000000 0
 141C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\node_modules\highlight.js\lib\languages\irpf90.js121436361000000000 0
-96C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\dist132871885492233173 1
+96C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\dist132871911830277827 1
 152C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\node_modules\lmdb\dependencies\lmdb\libraries\liblmdb\midl.h121436361000000000 0
 131C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\node_modules\msgpackr-extract\.circleci132869396654549316 1
 127C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\node_modules\postcss-convert-values132869396688065354 1
@@ -205,7 +205,7 @@
 124C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\node_modules\yallist\iterator.js121436361000000000 0
 149C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\node_modules\postcss-reduce-initial\data\fromInitial.json121436361000000000 0
 139C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\node_modules\core-js\es\typed-array\subarray.js121436361000000000 0
-119C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\src\js\views\resultsView.js132871336144815497 0
+119C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\src\js\views\resultsView.js132871909858048310 0
 134C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\node_modules\postcss-discard-comments\dist132869396643742434 1
 123C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\node_modules\is-url\.travis.yml131665623310000000 0
 119C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\node_modules\weak-lru-cache132869396684060697 1
@@ -233,7 +233,7 @@
 120C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\node_modules\core-js\es\json132869440950632506 1
 141C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\node_modules\css-tree\lib\syntax\config\walker.js121436361000000000 0
 142C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\node_modules\icss-utils\src\replaceValueSymbols.js121436361000000000 0
-112C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\src\js\views\View.js132871337479881619 0
+112C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\src\js\views\View.js132871911829257928 0
 116C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\node_modules\cipher-base132869396687805135 1
 143C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\node_modules\core-js\internals\array-copy-within.js121436361000000000 0
 128C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\node_modules\shebang-command\license131190036810000000 0
@@ -266,7 +266,7 @@
 158C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\node_modules\@parcel\utils\test\input\sourcemap\source-root.js.map121436361000000000 0
 148C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\node_modules\type-fest\source\union-to-intersection.d.ts121436361000000000 0
 168C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\node_modules\lmdb\dependencies\lmdb-data-v1\libraries\liblmdb\sample-bdb.txt121436361000000000 0
-112C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\src\js\controller.js132871881563742592 0
+112C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\src\js\controller.js132871911190626054 0
 112C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\node_modules\asn1.js132869396687184608 1
 111C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\node_modules\@babel132869396678378802 1
 141C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\node_modules\core-js\features\reflect\metadata.js121436361000000000 0
@@ -5147,7 +5147,7 @@
 148C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\node_modules\caniuse-lite\data\features\border-radius.js121436361000000000 0
 136C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\node_modules\highlight.js\scss\tomorrow.scss121436361000000000 0
 118C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\node_modules\ncp\README.md130614920630000000 0
-117C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\dist\favicon.8b2f57bf.png132871488344271739 0
+117C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\dist\favicon.8b2f57bf.png132871900197769212 0
 113C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\node_modules\ncp\test132869396647385562 1
 128C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\node_modules\ncp\test\modified-files132869396646249584 1
 150C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\node_modules\@parcel\fs-search\fs-search.darwin-arm64.node121436361000000000 0
@@ -7680,7 +7680,7 @@
 139C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\node_modules\es-abstract\2020\IterableToList.js121436361000000000 0
 138C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\node_modules\es-abstract\2020\IteratorClose.js121436361000000000 0
 137C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\node_modules\es-abstract\2020\IteratorNext.js121436361000000000 0
-119C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\dist\index.f7626f62.css.map132871488344286750 0
+119C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\dist\index.f7626f62.css.map132871900197448947 0
 137C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\node_modules\es-abstract\2020\IteratorStep.js121436361000000000 0
 121C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\node_modules\caniuse-api\dist132869396643697396 1
 135C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\node_modules\es-abstract\2017\DaysInYear.js121436361000000000 0
@@ -8545,7 +8545,7 @@
 123C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\node_modules\diffie-hellman\lib132869396641880830 1
 127C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\node_modules\diffie-hellman\LICENSE121436361000000000 0
 144C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\node_modules\core-js\proposals\collection-of-from.js121436361000000000 0
-115C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\dist\icons.21bad73c.svg132871488344396845 0
+115C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\dist\icons.21bad73c.svg132871900198374736 0
 132C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\node_modules\diffie-hellman\package.json132869396687079518 0
 147C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\node_modules\@babel\helper-validator-identifier\LICENSE121012626000000000 0
 135C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\node_modules\cosmiconfig\dist\readFile.d.ts121436361000000000 0
@@ -10913,7 +10913,7 @@
 151C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\node_modules\caniuse-lite\data\features\intl-pluralrules.js121436361000000000 0
 141C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\node_modules\caniuse-lite\data\features\jpegxr.js121436361000000000 0
 157C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\node_modules\caniuse-lite\data\features\keyboardevent-charcode.js121436361000000000 0
-115C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\dist\icons.dfd7a6db.svg132871488344396845 0
+115C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\dist\icons.dfd7a6db.svg132871900198374736 0
 153C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\node_modules\caniuse-lite\data\features\keyboardevent-code.js121436361000000000 0
 152C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\node_modules\caniuse-lite\data\features\keyboardevent-key.js121436361000000000 0
 157C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\node_modules\caniuse-lite\data\features\keyboardevent-location.js121436361000000000 0
@@ -11158,7 +11158,7 @@
 130C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\node_modules\browserify-cipher\test.js121436361000000000 0
 155C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\node_modules\@parcel\core\test\fixtures\invalid-source-not-file132869396654204789 1
 126C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\node_modules\browserify-aes\aes.js121436361000000000 0
-118C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\dist\index.e37f48ea.js.map132871885492223165 0
+118C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\dist\index.e37f48ea.js.map132871911830272820 0
 123C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\node_modules\base64-js\index.js121436361000000000 0
 133C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\node_modules\browserify-aes\authCipher.js121436361000000000 0
 132C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\node_modules\browserify-aes\encrypter.js121436361000000000 0
@@ -11358,7 +11358,7 @@
 135C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\node_modules\@types\node\assert\strict.d.ts132868836880000000 0
 144C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\node_modules\@parcel\packager-raw\src\RawPackager.js121436361000000000 0
 133C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\node_modules\@types\http-proxy\index.d.ts132839928660000000 0
-115C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\dist\index.f7626f62.css132871488344266732 0
+115C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\dist\index.f7626f62.css132871900197423919 0
 135C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\node_modules\@types\http-proxy\package.json132869396682021936 0
 118C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\node_modules\@trysound\sax132869396682372235 1
 122C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\node_modules\@trysound\sax\lib132869396634036520 1
@@ -12034,7 +12034,7 @@
 143C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\node_modules\@parcel\core\test\EntryRequest.test.js121436361000000000 0
 142C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\node_modules\@parcel\core\test\Environment.test.js121436361000000000 0
 144C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\node_modules\@parcel\core\test\InternalAsset.test.js121436361000000000 0
-114C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\dist\index.e37f48ea.js132871885492208151 0
+114C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\dist\index.e37f48ea.js132871911830252811 0
 137C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\node_modules\@parcel\core\test\Parcel.test.js121436361000000000 0
 150C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\node_modules\@parcel\core\test\ParcelConfigRequest.test.js121436361000000000 0
 145C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\node_modules\@parcel\core\test\RequestTracker.test.js121436361000000000 0
@@ -12616,5 +12616,5 @@
 120C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\node_modules\.bin\terser.ps1132869396693294851 0
 114C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\dist\index.62406edb.js132869433701979889 0
 118C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\dist\index.62406edb.js.map132869433702099989 0
-107C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\dist\index.html132871488344396845 0
-114C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\dist\logo.726d37a8.png132871488344486920 0
+107C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\dist\index.html132871900198374736 0
+114C:\Users\Victor\Desktop\udemy-projects\complete-javascript-course-master\18-forkify\starter\dist\logo.726d37a8.png132871900198064474 0
