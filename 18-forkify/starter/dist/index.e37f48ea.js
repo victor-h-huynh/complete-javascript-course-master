@@ -2346,7 +2346,7 @@ const createRecipeObject = function(data) {
 };
 const loadRecipe = async function(id) {
     try {
-        const data = await _helpersJs.AJAX(`${_configJs.API_URL}${id}`);
+        const data = await _helpersJs.AJAX(`${_configJs.API_URL}${id}?key=${_configJs.KEY}`);
         state.recipe = createRecipeObject(data);
         if (state.bookmarks.some((bookmark)=>bookmark.id === id
         )) state.recipe.bookmarked = true;
@@ -2361,14 +2361,17 @@ const loadRecipe = async function(id) {
 const loadSearchResults = async function(query) {
     try {
         state.search.query = query;
-        const data = await _helpersJs.AJAX(`${_configJs.API_URL}?search=${query}`);
+        const data = await _helpersJs.AJAX(`${_configJs.API_URL}?search=${query}&key=${_configJs.KEY}`);
         console.log(data);
         state.search.results = data.data.recipes.map((rec)=>{
             return {
                 id: rec.id,
                 title: rec.title,
                 publisher: rec.publisher,
-                image: rec.image_url
+                image: rec.image_url,
+                ...rec.key && {
+                    key: rec.key
+                }
             };
         });
         state.search.page = 1;
@@ -2421,7 +2424,9 @@ const uploadRecipe = async function(newRecipe) {
     try {
         const ingredients = Object.entries(newRecipe).filter((entry)=>entry[0].startsWith('ingredient') && entry[1] !== ''
         ).map((ing)=>{
-            const ingArr = ing[1].replaceAll(' ', '').split(',');
+            const ingArr = ing[1].split(',').map((el)=>el.trim()
+            );
+            // const ingArr = ing[1].replaceAll(' ', '').split(',');
             if (ingArr.length !== 3) throw new Error('Wrong ingredient format! Please use the correct format :)');
             const [quantity, unit, description] = ingArr;
             return {
@@ -2606,8 +2611,10 @@ class RecipeView extends _viewJsDefault.default {
         </div>
       </div>
 
-      <div class="recipe__user-generated">
-        
+      <div class="recipe__user-generated ${this._data.key ? '' : 'hidden'}">
+        <svg>
+          <use href="${_iconsSvgDefault.default}#icon-user"></use>
+        </svg>
       </div>
       <button class="btn--round btn--bookmark">
         <svg class="">
@@ -3089,6 +3096,11 @@ class PreviewView extends _viewJsDefault.default {
               <div class="preview__data">
                 <h4 class="preview__title">${this._data.title}</h4>
                 <p class="preview__publisher">${this._data.publisher}</p>
+                <div class="preview__user-generated ${this._data.key ? '' : 'hidden'}">
+                  <svg>
+                    <use href="${_iconsSvgDefault.default}#icon-user"></use>
+                  </svg>
+                </div>
               </div>
             </a>
         </li>
